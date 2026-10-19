@@ -21,7 +21,7 @@ export function Header() {
             <img
               src="/logo.png"
               alt="Logo Onco-Info"
-              className="h-9 w-9 rounded-sm border border-rule object-cover"
+              className="h-12 w-12 rounded-sm border border-rule object-cover"
             />
             <span className="leading-tight">
               <span className="block font-serif text-lg font-semibold tracking-tight text-ink">
