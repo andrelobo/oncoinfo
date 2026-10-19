@@ -1,5 +1,6 @@
 import { Link, useParams } from "react-router-dom";
 import { FactCard } from "../components/FactCard";
+import { AxisIcon } from "../components/AxisIcon";
 import { PageHeader } from "../components/PageHeader";
 import { ProposalCard } from "../components/ProposalCard";
 import { axes } from "../content/axes";
@@ -66,7 +67,8 @@ export function Government() {
             .map((axis) => (
               <section key={axis.slug} className="doc-section">
                 <div className="mb-3">
-                  <h2 className="font-serif text-lg font-semibold text-ink">
+                  <h2 className="flex items-center gap-2 font-serif text-lg font-semibold text-ink">
+                    <AxisIcon axis={axis.slug} className="h-5 w-5 text-accent" />
                     {axis.label}
                   </h2>
                   <p className="text-sm text-muted">{axis.question}</p>

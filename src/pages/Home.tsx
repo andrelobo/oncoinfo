@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { AxisIcon } from "../components/AxisIcon";
 import { axes } from "../content/axes";
 import { facts } from "../content/facts";
 import { periods } from "../content/periods";
@@ -33,49 +34,6 @@ export function Home() {
           fonte e data — e, quando falta dado, dizemos isso.
         </p>
       </section>
-
-      <section className="doc p-5">
-        <h2 className="font-serif text-lg font-semibold text-ink">Resumo</h2>
-        <div className="mt-3 grid gap-6 sm:grid-cols-3">
-          <div>
-            <p className="label">Recorte</p>
-            <p className="mt-1 text-sm text-muted">
-              2010 (Lula), 2016 (Dilma) e 2022 (Bolsonaro).
-            </p>
-          </div>
-          <div>
-            <p className="label">Conteúdo</p>
-            <p className="mt-1 text-sm text-muted">
-              Fatos por eixo e propostas de campanha de 2026.
-            </p>
-          </div>
-          <div>
-            <p className="label">Fonte</p>
-            <p className="mt-1 text-sm text-muted">
-              Documento e data em cada afirmação.
-            </p>
-          </div>
-        </div>
-        <div className="mt-4 grid grid-cols-2 border-t border-rule pt-4 sm:grid-cols-4">
-          <dl className="pr-4">
-            <dt className="label">Períodos</dt>
-            <dd className="font-mono text-2xl text-ink">{periods.length}</dd>
-          </dl>
-          <dl className="border-l border-rule px-4">
-            <dt className="label">Eixos</dt>
-            <dd className="font-mono text-2xl text-ink">{axes.length}</dd>
-          </dl>
-          <dl className="border-l border-rule px-4">
-            <dt className="label">Registros</dt>
-            <dd className="font-mono text-2xl text-ink">{facts.length}</dd>
-          </dl>
-          <dl className="border-l border-rule pl-4">
-            <dt className="label">Anos</dt>
-            <dd className="font-mono text-2xl text-ink">03–22</dd>
-          </dl>
-        </div>
-      </section>
-
 
       <section className="doc-section">
         <h2 className="label mb-3">Sumário</h2>
@@ -132,7 +90,8 @@ export function Home() {
                 to={`/comparar/${axis.slug}`}
                 className="block p-4 no-underline"
               >
-                <span className="font-serif text-sm font-semibold text-ink">
+                <span className="flex items-center gap-2 font-serif text-sm font-semibold text-ink">
+                  <AxisIcon axis={axis.slug} className="h-4 w-4 text-accent" />
                   {axis.label}
                 </span>
                 <span className="mt-1 block text-xs text-muted">
