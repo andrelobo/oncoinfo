@@ -1,0 +1,34 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Layout } from "./components/Layout";
+import { About } from "./pages/About";
+import { Compare } from "./pages/Compare";
+import { CompareAxis } from "./pages/CompareAxis";
+import { Faq } from "./pages/Faq";
+import { Government } from "./pages/Government";
+import { Home } from "./pages/Home";
+import { Methodology } from "./pages/Methodology";
+import { RealImpact } from "./pages/RealImpact";
+import { Sources } from "./pages/Sources";
+import { Timeline } from "./pages/Timeline";
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route element={<Layout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/comparar" element={<Compare />} />
+          <Route path="/comparar/:axis" element={<CompareAxis />} />
+          <Route path="/governo/:slug" element={<Government />} />
+          <Route path="/linha-do-tempo" element={<Timeline />} />
+          <Route path="/impacto-real" element={<RealImpact />} />
+          <Route path="/metodologia" element={<Methodology />} />
+          <Route path="/fontes" element={<Sources />} />
+          <Route path="/perguntas-frequentes" element={<Faq />} />
+          <Route path="/sobre" element={<About />} />
+          <Route path="*" element={<Home />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
+}
