@@ -14,13 +14,15 @@
   --color-rule: #e2e4e8;
   --color-rule-strong: #cdd1d8;
 
-  /* Cor como sinal, não decoração */
-  --color-link: #0b5fbf;
-  --color-accent: #0c7346;
+  /* Cor como sinal, com a paleta do logo (azul + verde) */
+  --color-brand-blue: #0059b6;
+  --color-brand-green: #03955b;
+  --color-link: #0059b6;
+  --color-accent: #03955b;
 
-  --color-dir-expansao: #0c7346;
+  --color-dir-expansao: #03955b;
   --color-dir-restricao: #a3182e;
-  --color-dir-estruturante: #1c5aa6;
+  --color-dir-estruturante: #0059b6;
   --color-dir-indefinido: #565d68;
 }
 
@@ -96,7 +98,11 @@
   }
 
   .btn-primary {
-    @apply inline-flex items-center gap-2 border border-ink bg-ink px-4 py-2 text-sm font-medium text-paper transition hover:bg-black;
+    @apply inline-flex items-center gap-2 rounded-md px-5 py-3 text-base font-semibold text-white shadow-sm transition;
+    background: linear-gradient(90deg, #0059b6 0%, #03955b 100%);
+  }
+  .btn-primary:hover {
+    background: linear-gradient(90deg, #00479a 0%, #027a4a 100%);
   }
 
   .btn-ghost {

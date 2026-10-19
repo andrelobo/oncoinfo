@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 import { AxisIcon } from "../components/AxisIcon";
 import { axes } from "../content/axes";
 import { periods } from "../content/periods";
@@ -22,7 +23,7 @@ export function Home() {
           fonte e data — e, quando falta dado, dizemos isso.
         </p>
         <Link to="/comparar" className="btn-primary mt-6">
-          Começar a comparar
+          Começar a comparar <ArrowRight className="h-5 w-5" />
         </Link>
       </section>
 

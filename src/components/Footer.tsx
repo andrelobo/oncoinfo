@@ -9,7 +9,7 @@ export function Footer() {
             <img
               src="/logo.png"
               alt="Logo Onco-Info"
-              className="h-[96px] w-[96px] rounded-sm border border-rule object-cover"
+              className="h-[96px] w-[96px] object-contain sm:h-[112px] sm:w-[112px]"
             />
             <div>
               <p className="font-serif text-base font-semibold text-ink">
