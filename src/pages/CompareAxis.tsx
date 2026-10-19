@@ -1,4 +1,5 @@
 import { Link, useParams } from "react-router-dom";
+import { DirectionChart } from "../components/DirectionChart";
 import { FactCard } from "../components/FactCard";
 import { PageHeader } from "../components/PageHeader";
 import { axisBySlug, axes } from "../content/axes";
@@ -49,6 +50,9 @@ export function CompareAxis() {
         eyebrow="Comparação por eixo"
         title={axisData.label}
         lead={axisData.question}
+      />
+      <DirectionChart
+        facts={facts.filter((fact) => fact.axis === axisData.slug)}
       />
       <div className="space-y-8">
         {periods.map((period) => {
