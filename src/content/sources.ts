@@ -117,6 +117,16 @@ export const sources: Source[] = [
     date: "2021-11",
     file: "/docs/relatorio-bolsonaro.pdf",
   },
+  {
+    id: "comparativo-2026-saude",
+    kind: "analise",
+    title:
+      "Comparativo de Propostas para a Saúde e o SUS — Panorama Eleitoral de 2026",
+    outlet: "Documento de análise eleitoral",
+    date: "2026-10",
+    file: "/docs/comparativo_propostas_saude_2026.pdf",
+    note: "Documento de campanha/análise. Descreve propostas e análises de especialistas; não registra atos de governo executados.",
+  },
 ];
 
 export const sourceById = Object.fromEntries(

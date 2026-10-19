@@ -17,7 +17,8 @@ export type SourceKind =
   | "portaria"
   | "orcamento"
   | "clipping"
-  | "programa";
+  | "programa"
+  | "analise";
 
 export type Direction = "expansao" | "restricao" | "estruturante" | "indefinido";
 
@@ -65,4 +66,28 @@ export type TimelineEvent = {
   period: PeriodSlug;
   sourceIds: string[];
   description: string;
+};
+
+export type CandidateSlug = "flavio-bolsonaro" | "lula";
+
+export type Candidate = {
+  slug: CandidateSlug;
+  name: string;
+  role: string;
+};
+
+/**
+ * Proposta de campanha eleitoral. NÃO é ato de governo: é intenção declarada
+ * em documento de campanha, sem execução registrada.
+ */
+export type Proposal = {
+  id: string;
+  candidate: CandidateSlug;
+  axis: AxisSlug;
+  title: string;
+  proposal: string;
+  expertView: string;
+  impact: string;
+  sourceIds: string[];
+  limitation?: string;
 };

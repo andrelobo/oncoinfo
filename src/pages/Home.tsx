@@ -81,6 +81,23 @@ export function Home() {
           Ver tabela completa
         </Link>
       </section>
+
+      <section className="space-y-3 rounded-lg border border-violet-200 bg-violet-50 p-4">
+        <h2 className="text-lg font-semibold text-violet-900">
+          Eleições 2026: propostas x histórico
+        </h2>
+        <p className="max-w-3xl text-sm text-violet-900">
+          Compare, eixo por eixo, o que o material registra como ato de governo
+          (2003–2022) com o que as campanhas de 2026 propõem. São coisas
+          diferentes: promessa de campanha não é ato executado.
+        </p>
+        <Link
+          to="/eleicoes-2026"
+          className="tap-target inline-flex rounded-md bg-violet-900 px-4 text-sm font-medium text-white hover:bg-violet-700"
+        >
+          Ver comparativo 2026
+        </Link>
+      </section>
     </div>
   );
 }

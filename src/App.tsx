@@ -3,6 +3,7 @@ import { Layout } from "./components/Layout";
 import { About } from "./pages/About";
 import { Compare } from "./pages/Compare";
 import { CompareAxis } from "./pages/CompareAxis";
+import { Elections2026 } from "./pages/Elections2026";
 import { Faq } from "./pages/Faq";
 import { Government } from "./pages/Government";
 import { Home } from "./pages/Home";
@@ -22,6 +23,7 @@ export default function App() {
           <Route path="/governo/:slug" element={<Government />} />
           <Route path="/linha-do-tempo" element={<Timeline />} />
           <Route path="/impacto-real" element={<RealImpact />} />
+          <Route path="/eleicoes-2026" element={<Elections2026 />} />
           <Route path="/metodologia" element={<Methodology />} />
           <Route path="/fontes" element={<Sources />} />
           <Route path="/perguntas-frequentes" element={<Faq />} />

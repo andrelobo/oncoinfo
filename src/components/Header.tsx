@@ -4,6 +4,7 @@ const navItems = [
   { to: "/comparar", label: "Comparar" },
   { to: "/linha-do-tempo", label: "Linha do tempo" },
   { to: "/impacto-real", label: "Impacto real" },
+  { to: "/eleicoes-2026", label: "Eleições 2026" },
   { to: "/metodologia", label: "Metodologia" },
   { to: "/fontes", label: "Fontes" },
   { to: "/perguntas-frequentes", label: "Dúvidas" },

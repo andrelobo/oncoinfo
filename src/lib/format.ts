@@ -64,6 +64,8 @@ export function sourceKindLabel(kind: string): string {
       return "Clipping";
     case "programa":
       return "Programa";
+    case "analise":
+      return "Análise";
     default:
       return kind;
   }
