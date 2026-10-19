@@ -1,4 +1,5 @@
 import { FactCard } from "../components/FactCard";
+import { AxisIllustration } from "../components/Illustration";
 import { PageHeader } from "../components/PageHeader";
 import { ProposalCard } from "../components/ProposalCard";
 import { axes } from "../content/axes";
@@ -34,11 +35,17 @@ export function Elections2026() {
 
         return (
           <section key={axis.slug} className="doc-section">
-            <div className="mb-4 border-b border-rule pb-2">
-              <h2 className="font-serif text-xl font-semibold text-ink">
-                {axis.label}
-              </h2>
-              <p className="text-sm text-muted">{axis.question}</p>
+            <div className="mb-4 flex items-start justify-between gap-4 border-b border-rule pb-2">
+              <div>
+                <h2 className="font-serif text-xl font-semibold text-ink">
+                  {axis.label}
+                </h2>
+                <p className="text-sm text-muted">{axis.question}</p>
+              </div>
+              <AxisIllustration
+                slug={axis.slug}
+                className="h-16 w-20 shrink-0"
+              />
             </div>
 
             <div className="grid gap-6 lg:grid-cols-2">
