@@ -9,7 +9,7 @@ export function Footer() {
             <img
               src="/logo.png"
               alt="Logo Onco-Info"
-              className="h-[96px] w-[96px] object-contain sm:h-[112px] sm:w-[112px]"
+              className="h-14 w-14 shrink-0 object-contain"
             />
             <div>
               <p className="font-serif text-base font-semibold text-ink">
