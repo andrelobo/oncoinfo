@@ -1,5 +1,6 @@
 import { ComparisonTable } from "../components/ComparisonTable";
 import { DirectionBadge } from "../components/DirectionBadge";
+import { DirectionChart } from "../components/DirectionChart";
 import { PageHeader } from "../components/PageHeader";
 import { axes } from "../content/axes";
 import { facts } from "../content/facts";
@@ -19,6 +20,7 @@ export function Compare() {
         title="Comparar períodos por eixo"
         lead="O que o material documenta em cada período, eixo por eixo."
       />
+      <DirectionChart facts={facts} />
       <div className="flex flex-wrap items-center gap-x-4 gap-y-2 border border-rule bg-canvas px-4 py-3">
         <span className="label">Legenda</span>
         <DirectionBadge direction="expansao" />

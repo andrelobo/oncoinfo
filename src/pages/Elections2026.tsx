@@ -1,4 +1,5 @@
 import { FactCard } from "../components/FactCard";
+import { DirectionChart } from "../components/DirectionChart";
 import { AxisIllustration } from "../components/Illustration";
 import { PageHeader } from "../components/PageHeader";
 import { ProposalCard } from "../components/ProposalCard";
@@ -26,6 +27,8 @@ export function Elections2026() {
         title="Propostas de campanha x histórico documentado"
         lead="Esta seção coloca, eixo por eixo, o que o material registra como ato de governo no SUS (2003–2022) ao lado do que as campanhas de 2026 propõem. São coisas diferentes: um ato executado não equivale a uma promessa de campanha, e vice-versa."
       />
+
+      <DirectionChart facts={facts} />
 
       {relevantAxes.map((axis) => {
         const historyFacts = facts.filter((fact) => fact.axis === axis.slug);
