@@ -5,17 +5,6 @@ import { facts } from "../content/facts";
 import { periods } from "../content/periods";
 import { useSeo } from "../lib/seo";
 
-const sections = [
-  { to: "/comparar", no: "01", label: "Comparar períodos", desc: "Tabela eixo por eixo" },
-  { to: "/linha-do-tempo", no: "02", label: "Linha do tempo", desc: "Marcos de 2005 a 2022" },
-  { to: "/impacto-real", no: "03", label: "Impacto real", desc: "O que dá e não dá para afirmar" },
-  { to: "/eleicoes-2026", no: "04", label: "Eleições 2026", desc: "Propostas x histórico" },
-  { to: "/flavio-2026", no: "05", label: "Se Flávio for eleito", desc: "O que pode mudar no SUS" },
-  { to: "/estados", no: "06", label: "Estados", desc: "Recortes estaduais" },
-  { to: "/fontes", no: "07", label: "Fontes", desc: "Lista de referências" },
-  { to: "/metodologia", no: "08", label: "Metodologia", desc: "Como lemos os dados" },
-];
-
 export function Home() {
   useSeo(
     "Início",
@@ -33,28 +22,6 @@ export function Home() {
           O que o SUS fez no tratamento do câncer em três governos. Só fatos com
           fonte e data — e, quando falta dado, dizemos isso.
         </p>
-      </section>
-
-      <section className="doc-section">
-        <h2 className="label mb-3">Sumário</h2>
-        <ol className="divide-y divide-rule border-y border-rule">
-          {sections.map((item) => (
-            <li key={item.to}>
-              <Link
-                to={item.to}
-                className="group flex items-baseline gap-4 py-3 no-underline"
-              >
-                <span className="section-no w-6 shrink-0">{item.no}</span>
-                <span className="font-serif text-base font-semibold text-ink group-hover:text-link">
-                  {item.label}
-                </span>
-                <span className="ml-auto text-right text-xs text-muted">
-                  {item.desc}
-                </span>
-              </Link>
-            </li>
-          ))}
-        </ol>
       </section>
 
       <section className="doc-section">

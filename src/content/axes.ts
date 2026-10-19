@@ -4,37 +4,37 @@ export const axes: Axis[] = [
   {
     slug: "prevencao-rastreamento",
     label: "Prevenção e rastreamento",
-    question: "O que foi feito para detectar o câncer antes?",
+    question: "O que a rede fez para pegar o câncer cedo?",
   },
   {
     slug: "diagnostico-inicio-tratamento",
     label: "Diagnóstico e início do tratamento",
-    question: "Quais prazos e fluxos foram definidos?",
+    question: "Quanto tempo leva do primeiro sintoma até o tratamento começar?",
   },
   {
     slug: "medicamentos-incorporacao",
     label: "Medicamentos e incorporação",
-    question: "Quais remédios entraram e como foram financiados?",
+    question: "Quais remédios contra o câncer o SUS passou a oferecer?",
   },
   {
     slug: "orcamento-federal",
     label: "Orçamento federal",
-    question: "Quanto dinheiro foi destinado e como foi alocado?",
+    question: "Quanto foi destinado e se o dinheiro chegou?",
   },
   {
     slug: "radioterapia-estrutura",
     label: "Radioterapia e estrutura",
-    question: "O que foi feito em equipamentos e rede física?",
+    question: "Máquinas, leitos e estrutura para tratar quem precisa?",
   },
   {
     slug: "direitos-do-paciente",
     label: "Direitos do paciente",
-    question: "Quais direitos foram criados ou alterados?",
+    question: "O que a lei garante a quem está com câncer?",
   },
   {
     slug: "planos-de-saude",
     label: "Planos de saúde",
-    question: "O que mudou na cobertura da saúde suplementar?",
+    question: "O que planos de saúde são obrigados a cobrir?",
   },
 ];
 
