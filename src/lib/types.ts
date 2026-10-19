@@ -69,7 +69,6 @@ export type TimelineEvent = {
 };
 
 export type CandidateSlug = "flavio-bolsonaro" | "lula";
-
 export type Candidate = {
   slug: CandidateSlug;
   name: string;
@@ -90,4 +89,30 @@ export type Proposal = {
   impact: string;
   sourceIds: string[];
   limitation?: string;
+};
+
+export type StateSlug = "amazonas";
+
+/**
+ * Etapa histórica de um recorte estadual (unidade de saúde / serviço oncológico).
+ * Cada etapa precisa de fonte; a ausência de dado é declarada em `limitation`.
+ */
+export type StateEra = {
+  id: string;
+  period: string; // "Anos 1990" — texto livre, pois o recorte estadual não usa os períodos federais
+  title: string;
+  detail: string;
+  sourceIds: string[]; // NUNCA vazio
+  limitation?: string;
+};
+
+export type StateCase = {
+  slug: StateSlug;
+  state: string; // "Amazonas"
+  institution: string; // "CECON · FCECON"
+  headline: string;
+  context?: string; // enquadramento histórico geral do recorte
+  summary: string;
+  warning: string;
+  eras: StateEra[];
 };

@@ -127,6 +127,16 @@ export const sources: Source[] = [
     file: "/docs/comparativo_propostas_saude_2026.pdf",
     note: "Documento de campanha/análise. Descreve propostas e análises de especialistas; não registra atos de governo executados.",
   },
+  {
+    id: "fcecon-am-2026",
+    kind: "clipping",
+    title:
+      "FCECON e o SUS — as três ondas de avanço do CECON/FCECON (Amazonas): Fundação nos anos 1990, virada digital em 2013 e modernização em 2025–2026",
+    outlet: "Material cedido para inclusão no site",
+    date: "2026-10",
+    file: "/docs/amazonas-fcecon.pdf",
+    note: "Texto fornecido pela equipe. Descreve etapas históricas e entregas informadas; PDF a ser anexado em /docs.",
+  },
 ];
 
 export const sourceById = Object.fromEntries(

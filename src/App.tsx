@@ -10,6 +10,8 @@ import { Home } from "./pages/Home";
 import { Methodology } from "./pages/Methodology";
 import { RealImpact } from "./pages/RealImpact";
 import { Sources } from "./pages/Sources";
+import { State } from "./pages/State";
+import { States } from "./pages/States";
 import { Timeline } from "./pages/Timeline";
 
 export default function App() {
@@ -24,6 +26,8 @@ export default function App() {
           <Route path="/linha-do-tempo" element={<Timeline />} />
           <Route path="/impacto-real" element={<RealImpact />} />
           <Route path="/eleicoes-2026" element={<Elections2026 />} />
+          <Route path="/estados" element={<States />} />
+          <Route path="/estados/:slug" element={<State />} />
           <Route path="/metodologia" element={<Methodology />} />
           <Route path="/fontes" element={<Sources />} />
           <Route path="/perguntas-frequentes" element={<Faq />} />
