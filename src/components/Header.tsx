@@ -13,49 +13,47 @@ const navItems = [
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-ink-950/70 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b border-rule bg-paper/95 backdrop-blur-sm">
       <div className="mx-auto max-w-5xl px-4 py-3">
         <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
-          <Link to="/" className="tap group flex items-center gap-3">
-            <span className="grid h-10 w-10 place-items-center overflow-hidden rounded-xl bg-white ring-1 ring-white/20">
-              <img
-                src="/logo.png"
-                alt="Logo Onco-Info"
-                className="h-full w-full object-cover"
-              />
-            </span>
+          <Link to="/" className="tap flex items-center gap-3">
+            <img
+              src="/logo.png"
+              alt="Logo Onco-Info"
+              className="h-9 w-9 rounded-sm border border-rule object-cover"
+            />
             <span className="leading-tight">
-              <span className="block font-display text-lg font-bold text-white">
+              <span className="block font-serif text-lg font-semibold tracking-tight text-ink">
                 Onco-Info
               </span>
-              <span className="block text-[11px] font-medium uppercase tracking-[0.18em] text-slate-400">
+              <span className="block font-mono text-[10px] uppercase tracking-[0.16em] text-faint">
                 Informação salva vidas
               </span>
             </span>
           </Link>
-          <p className="hidden text-xs text-slate-500 sm:block">
+          <p className="hidden font-mono text-[11px] uppercase tracking-[0.1em] text-faint sm:block">
             Comparativo documental · 2003–2022
           </p>
         </div>
-        <nav aria-label="Navegação principal" className="mt-2">
-          <ul className="flex flex-wrap gap-1">
-            {navItems.map((item) => (
-              <li key={item.to}>
-                <NavLink
-                  to={item.to}
-                  className={({ isActive }) =>
-                    `tap rounded-full px-3 text-sm font-medium transition ${
-                      isActive
-                        ? "bg-white/10 text-white ring-1 ring-inset ring-white/20"
-                        : "text-slate-300 hover:bg-white/5 hover:text-white"
-                    }`
-                  }
-                >
-                  {item.label}
-                </NavLink>
-              </li>
-            ))}
-          </ul>
+        <nav
+          aria-label="Navegação principal"
+          className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1"
+        >
+          {navItems.map((item) => (
+            <NavLink
+              key={item.to}
+              to={item.to}
+              className={({ isActive }) =>
+                `tap border-b-2 py-1 font-mono text-[11px] font-medium uppercase tracking-[0.12em] transition ${
+                  isActive
+                    ? "border-ink text-ink"
+                    : "border-transparent text-muted hover:border-rule-strong hover:text-ink"
+                }`
+              }
+            >
+              {item.label}
+            </NavLink>
+          ))}
         </nav>
       </div>
     </header>

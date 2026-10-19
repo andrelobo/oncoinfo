@@ -18,22 +18,18 @@ export function About() {
       />
       <MethodWarning message="Este site não é propaganda oficial de partido, não é laudo técnico e não substitui a leitura dos documentos originais." />
 
-      <section className="space-y-2">
-        <h2 className="font-display text-xl font-bold text-white">
-          O que o site é
-        </h2>
-        <ul className="list-inside list-disc space-y-1 text-sm text-slate-300">
+      <section className="doc-section">
+        <h2 className="label mb-2">O que o site é</h2>
+        <ul className="list-inside list-disc space-y-1 text-sm text-muted">
           <li>Um comparativo documental, eixo por eixo, por período de governo.</li>
           <li>Uma lista verificável de fontes datadas.</li>
           <li>Um material que declara abertamente onde falta dado.</li>
         </ul>
       </section>
 
-      <section className="space-y-2">
-        <h2 className="font-display text-xl font-bold text-white">
-          O que o site não é
-        </h2>
-        <ul className="list-inside list-disc space-y-1 text-sm text-slate-300">
+      <section className="doc-section">
+        <h2 className="label mb-2">O que o site não é</h2>
+        <ul className="list-inside list-disc space-y-1 text-sm text-muted">
           <li>Não é peça de campanha nem propaganda de partido.</li>
           <li>Não é laudo técnico nem auditoria orçamentária.</li>
           <li>
@@ -43,23 +39,21 @@ export function About() {
         </ul>
       </section>
 
-      <section className="space-y-2">
-        <h2 className="font-display text-xl font-bold text-white">
-          Correções e contato
-        </h2>
-        <p className="text-slate-300">
+      <section className="doc-section">
+        <h2 className="label mb-2">Correções e contato</h2>
+        <p className="text-muted">
           Encontrou um erro ou tem uma fonte melhor? Envie o documento e a
           referência para o contato indicado ao final desta página. Correções
           são incorporadas com data e nota de revisão, mantendo o histórico da
           mudança.
         </p>
-        <p className="text-sm text-slate-400">
+        <p className="mt-3 text-sm text-muted">
           Leia também a{" "}
-          <Link to="/metodologia" className="text-brand-green-light hover:underline">
+          <Link to="/metodologia" className="doclink">
             metodologia
           </Link>{" "}
           e a lista completa de{" "}
-          <Link to="/fontes" className="text-brand-green-light hover:underline">
+          <Link to="/fontes" className="doclink">
             fontes
           </Link>
           .

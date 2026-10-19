@@ -2,16 +2,17 @@ import { directionLabel } from "../lib/format";
 import type { Direction } from "../lib/types";
 
 const styles: Record<Direction, string> = {
-  expansao: "bg-emerald-500/15 text-emerald-300 ring-emerald-400/30",
-  restricao: "bg-rose-500/15 text-rose-300 ring-rose-400/30",
-  estruturante: "bg-sky-500/15 text-sky-300 ring-sky-400/30",
-  indefinido: "bg-slate-500/15 text-slate-300 ring-slate-400/30",
+  expansao: "border-dir-expansao/30 bg-dir-expansao/5 text-dir-expansao",
+  restricao: "border-dir-restricao/30 bg-dir-restricao/5 text-dir-restricao",
+  estruturante:
+    "border-dir-estruturante/30 bg-dir-estruturante/5 text-dir-estruturante",
+  indefinido: "border-dir-indefinido/30 bg-dir-indefinido/5 text-dir-indefinido",
 };
 
 export function DirectionBadge({ direction }: { direction: Direction }) {
   return (
     <span
-      className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold ring-1 ring-inset ${styles[direction]}`}
+      className={`inline-flex items-center border px-1.5 py-0.5 font-mono text-[10px] font-medium uppercase tracking-[0.1em] ${styles[direction]}`}
     >
       {directionLabel(direction)}
     </span>

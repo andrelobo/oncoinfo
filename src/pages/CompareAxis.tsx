@@ -24,20 +24,17 @@ export function CompareAxis() {
     return (
       <div className="space-y-4">
         <PageHeader title="Eixo não encontrado" />
-        <p className="text-slate-300">
+        <p className="text-muted">
           O eixo informado não existe. Confira a lista na página{" "}
-          <Link to="/comparar" className="text-brand-green-light hover:underline">
+          <Link to="/comparar" className="doclink">
             comparar
           </Link>
           .
         </p>
-        <ul className="list-inside list-disc space-y-1 text-sm text-slate-300">
+        <ul className="list-inside list-disc space-y-1 text-sm text-muted">
           {axes.map((item) => (
             <li key={item.slug}>
-              <Link
-                to={`/comparar/${item.slug}`}
-                className="text-brand-green-light hover:underline"
-              >
+              <Link to={`/comparar/${item.slug}`} className="doclink">
                 {item.label}
               </Link>
             </li>
@@ -48,7 +45,7 @@ export function CompareAxis() {
   }
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-8">
       <PageHeader
         eyebrow="Comparação por eixo"
         title={axisData.label}
@@ -62,8 +59,8 @@ export function CompareAxis() {
             (fact) => fact.period === period.slug && fact.axis === axisData.slug,
           );
           return (
-            <section key={period.slug} className="space-y-3">
-              <h2 className="font-display text-lg font-semibold text-white">
+            <section key={period.slug} className="doc-section">
+              <h2 className="mb-3 font-serif text-lg font-semibold text-ink">
                 {period.label}
               </h2>
               {periodFacts.length > 0 ? (
@@ -73,7 +70,7 @@ export function CompareAxis() {
                   ))}
                 </div>
               ) : (
-                <p className="surface px-4 py-3 text-sm text-slate-400">
+                <p className="border border-rule bg-canvas px-4 py-3 font-mono text-[11px] uppercase tracking-[0.08em] text-faint">
                   Sem dado suficiente no material.
                 </p>
               )}

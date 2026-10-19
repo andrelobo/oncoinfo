@@ -21,11 +21,9 @@ export function RealImpact() {
       />
       <MethodWarning message="Atos normativos não equivalem, por si sós, a resultados na ponta. Sem dado de execução, tratamos o registro como descrição do ato, não como prova de desfecho." />
 
-      <section className="space-y-3">
-        <h2 className="font-display text-xl font-bold text-white">
-          Princípios de leitura
-        </h2>
-        <ul className="list-inside list-disc space-y-1 text-sm text-slate-300">
+      <section className="doc-section">
+        <h2 className="label mb-3">Princípios de leitura</h2>
+        <ul className="list-inside list-disc space-y-1 text-sm text-muted">
           <li>Não comparamos governos como “melhor” ou “pior”.</li>
           <li>Cada afirmação tem fonte e data no material coletado.</li>
           <li>
@@ -39,11 +37,9 @@ export function RealImpact() {
         </ul>
       </section>
 
-      <section className="space-y-3">
-        <h2 className="font-display text-xl font-bold text-white">
-          Registros com limitação explícita
-        </h2>
-        <p className="text-sm text-slate-400">
+      <section className="doc-section">
+        <h2 className="label mb-1">Registros com limitação explícita</h2>
+        <p className="mb-3 text-sm text-muted">
           Estes registros trazem, no próprio material ou em nota editorial, uma
           ressalva de leitura.
         </p>
@@ -54,11 +50,11 @@ export function RealImpact() {
         </div>
       </section>
 
-      <section className="surface space-y-2 p-5">
-        <h2 className="font-display text-lg font-bold text-white">
+      <section className="doc p-5">
+        <h2 className="font-serif text-lg font-semibold text-ink">
           Sem dado suficiente no material
         </h2>
-        <p className="text-sm text-slate-300">
+        <p className="mt-2 text-sm text-muted">
           Desfechos populacionais como mortalidade, incidência e tempo real de
           espera não estão mensurados de forma comparável no material coletado.
           Por isso, não são apresentados números de impacto aqui.

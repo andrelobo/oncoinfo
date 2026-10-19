@@ -8,48 +8,50 @@ export function SourceList({ sourceIds }: { sourceIds: string[] }) {
 
   if (items.length === 0) {
     return (
-      <p className="text-xs text-slate-400">
+      <p className="font-mono text-[11px] uppercase tracking-[0.08em] text-faint">
         Sem dado suficiente no material.
       </p>
     );
   }
 
   return (
-    <ul className="space-y-2">
-      {items.map((source) => (
-        <li
-          key={source.id}
-          className="flex flex-col gap-0.5 border-l-2 border-brand-green/40 pl-3 text-sm"
-        >
-          <span className="font-medium text-slate-200">{source.title}</span>
-          <span className="text-xs text-slate-400">
-            {sourceKindLabel(source.kind)}
-            {source.outlet ? ` · ${source.outlet}` : ""} ·{" "}
-            {formatMonthYear(source.date)}
-            {source.note ? ` · ${source.note}` : ""}
+    <ol className="space-y-2">
+      {items.map((source, index) => (
+        <li key={source.id} className="flex gap-3 text-sm">
+          <span className="mt-0.5 font-mono text-[11px] text-faint">
+            [{index + 1}]
           </span>
-          {source.file ? (
-            <a
-              href={source.file}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="tap w-fit text-xs font-medium text-brand-green-light hover:underline"
-            >
-              Abrir documento (PDF) ↗
-            </a>
-          ) : null}
-          {source.url ? (
-            <a
-              href={source.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="tap w-fit text-xs font-medium text-brand-green-light hover:underline"
-            >
-              Abrir fonte ↗
-            </a>
-          ) : null}
+          <div className="min-w-0">
+            <p className="text-ink">{source.title}</p>
+            <p className="mt-0.5 font-mono text-[11px] uppercase tracking-[0.06em] text-faint">
+              {sourceKindLabel(source.kind)}
+              {source.outlet ? ` · ${source.outlet}` : ""} ·{" "}
+              {formatMonthYear(source.date)}
+              {source.note ? ` · ${source.note}` : ""}
+            </p>
+            {source.file ? (
+              <a
+                href={source.file}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="doclink mt-0.5 inline-block font-mono text-[11px] uppercase tracking-[0.06em] no-underline hover:underline"
+              >
+                Abrir documento (PDF) ↗
+              </a>
+            ) : null}
+            {source.url ? (
+              <a
+                href={source.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="doclink mt-0.5 inline-block font-mono text-[11px] uppercase tracking-[0.06em] no-underline hover:underline"
+              >
+                Abrir fonte ↗
+              </a>
+            ) : null}
+          </div>
         </li>
       ))}
-    </ul>
+    </ol>
   );
 }

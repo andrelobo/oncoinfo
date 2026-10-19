@@ -11,18 +11,16 @@ export function Methodology() {
   return (
     <div className="space-y-8">
       <PageHeader
-        eyebrow="Como fazemos"
+        eyebrow="Método"
         title="Metodologia"
         lead="Este site é documental e comparativo. Ele descreve o que documentos oficiais e clippings registram sobre oncologia no SUS em três períodos de governo federal."
       />
 
       <MethodWarning message="O site não é propaganda partidária, não é laudo técnico e não afirma causalidade entre ações de governo e desfechos individuais." />
 
-      <section className="space-y-2">
-        <h2 className="font-display text-xl font-bold text-white">
-          Recorte de períodos
-        </h2>
-        <p className="text-slate-300">
+      <section className="doc-section">
+        <h2 className="label mb-2">1 · Recorte de períodos</h2>
+        <p className="text-muted">
           Trabalhamos com três recortes separados: primeiro governo Lula
           (2003–2010), governo Dilma (2011–2016) e governo Bolsonaro
           (2019–2022). A separação existe para não atribuir a um governo os atos
@@ -30,42 +28,43 @@ export function Methodology() {
         </p>
       </section>
 
-      <section className="space-y-2">
-        <h2 className="font-display text-xl font-bold text-white">
-          Tipos de fonte
-        </h2>
-        <ul className="list-inside list-disc space-y-1 text-sm text-slate-300">
-          <li>
-            <span className="font-medium text-slate-100">Lei</span> e{" "}
-            <span className="font-medium text-slate-100">Portaria</span>: atos
-            normativos com número e data.
-          </li>
-          <li>
-            <span className="font-medium text-slate-100">Orçamento</span>: peças
-            e propostas orçamentárias.
-          </li>
-          <li>
-            <span className="font-medium text-slate-100">Clipping</span>:
-            notícias de veículos e órgãos, usadas como registro do que foi
-            divulgado na época.
-          </li>
-          <li>
-            <span className="font-medium text-slate-100">Programa</span>:
-            políticas e programas governamentais.
-          </li>
-          <li>
-            <span className="font-medium text-slate-100">Análise</span>:
-            documentos de análise que comparam propostas, sem registro de
-            execução.
-          </li>
-        </ul>
+      <section className="doc-section">
+        <h2 className="label mb-2">2 · Tipos de fonte</h2>
+        <dl className="divide-y divide-rule border-y border-rule text-sm">
+          <div className="grid gap-1 py-2 sm:grid-cols-[10rem_1fr]">
+            <dt className="font-medium text-ink">Lei / Portaria</dt>
+            <dd className="text-muted">Atos normativos com número e data.</dd>
+          </div>
+          <div className="grid gap-1 py-2 sm:grid-cols-[10rem_1fr]">
+            <dt className="font-medium text-ink">Orçamento</dt>
+            <dd className="text-muted">Peças e propostas orçamentárias.</dd>
+          </div>
+          <div className="grid gap-1 py-2 sm:grid-cols-[10rem_1fr]">
+            <dt className="font-medium text-ink">Clipping</dt>
+            <dd className="text-muted">
+              Notícias de veículos e órgãos, como registro do que foi divulgado
+              na época.
+            </dd>
+          </div>
+          <div className="grid gap-1 py-2 sm:grid-cols-[10rem_1fr]">
+            <dt className="font-medium text-ink">Programa</dt>
+            <dd className="text-muted">
+              Políticas e programas governamentais.
+            </dd>
+          </div>
+          <div className="grid gap-1 py-2 sm:grid-cols-[10rem_1fr]">
+            <dt className="font-medium text-ink">Análise</dt>
+            <dd className="text-muted">
+              Documentos de análise que comparam propostas, sem registro de
+              execução.
+            </dd>
+          </div>
+        </dl>
       </section>
 
-      <section className="space-y-2">
-        <h2 className="font-display text-xl font-bold text-white">
-          Regras editoriais
-        </h2>
-        <ul className="list-inside list-disc space-y-1 text-sm text-slate-300">
+      <section className="doc-section">
+        <h2 className="label mb-2">3 · Regras editoriais</h2>
+        <ul className="list-inside list-disc space-y-1 text-sm text-muted">
           <li>Toda afirmação tem uma ou mais fontes identificadas e datadas.</li>
           <li>Nenhum registro é exibido sem fonte.</li>
           <li>
@@ -79,11 +78,9 @@ export function Methodology() {
         </ul>
       </section>
 
-      <section className="space-y-2">
-        <h2 className="font-display text-xl font-bold text-white">
-          Como ler uma estimativa
-        </h2>
-        <p className="text-slate-300">
+      <section className="doc-section">
+        <h2 className="label mb-2">4 · Como ler uma estimativa</h2>
+        <p className="text-muted">
           Quando o material cita números de uma proposta — por exemplo, um
           orçamento previsto — tratamos como proposta, não como gasto executado.
           Sempre que houver essa diferença, ela é apontada na limitação do

@@ -1,10 +1,18 @@
 import { Link } from "react-router-dom";
 import { MethodWarning } from "../components/MethodWarning";
-import { PeriodBadge } from "../components/PeriodBadge";
 import { axes } from "../content/axes";
 import { facts } from "../content/facts";
 import { periods } from "../content/periods";
 import { useSeo } from "../lib/seo";
+
+const sections = [
+  { to: "/comparar", no: "01", label: "Comparar períodos", desc: "Tabela eixo por eixo" },
+  { to: "/linha-do-tempo", no: "02", label: "Linha do tempo", desc: "Marcos de 2005 a 2022" },
+  { to: "/impacto-real", no: "03", label: "Impacto real", desc: "O que dá e não dá para afirmar" },
+  { to: "/eleicoes-2026", no: "04", label: "Eleições 2026", desc: "Propostas x histórico" },
+  { to: "/fontes", no: "05", label: "Fontes", desc: "Lista de referências" },
+  { to: "/metodologia", no: "06", label: "Metodologia", desc: "Regras editoriais" },
+];
 
 export function Home() {
   useSeo(
@@ -12,130 +20,137 @@ export function Home() {
     "Comparativo documental das políticas de oncologia no SUS nos governos Lula (2003–2010), Dilma (2011–2016) e Bolsonaro (2019–2022), com fontes e datas.",
   );
 
-  const totalFacts = facts.length;
-
   return (
     <div className="space-y-12">
-      <section className="relative space-y-6 pt-4">
-        <p className="eyebrow">Oncologia no SUS · comparativo documental</p>
-        <h1 className="max-w-3xl font-display text-4xl font-black leading-[1.05] text-white sm:text-6xl">
-          O que os documentos <span className="gradient-text">registram</span>{" "}
-          sobre o câncer no SUS
+      <section>
+        <p className="label mb-3">Relatório documental · Oncologia no SUS</p>
+        <h1 className="max-w-3xl font-serif text-4xl font-semibold leading-tight text-ink sm:text-5xl">
+          O que os documentos registram sobre o câncer no SUS
         </h1>
-        <p className="lede">
-          Comparamos, com base em documentos oficiais e clippings, o que foi
+        <p className="prose-lead mt-4">
+          Comparativo, com base em documentos oficiais e clippings, do que foi
           feito na atenção oncológica do SUS em três períodos de governo
           federal. Cada afirmação tem fonte e data. Onde não há dado, escrevemos
           exatamente isso.
         </p>
-
-        <div className="flex flex-wrap gap-3">
-          <Link to="/comparar" className="btn-primary">
-            Comparar períodos
-          </Link>
-          <Link to="/eleicoes-2026" className="btn-ghost">
-            Propostas 2026 →
-          </Link>
-        </div>
-
-        <dl className="grid grid-cols-2 gap-4 pt-4 sm:grid-cols-4">
-          <div>
-            <dd className="font-display text-3xl font-bold text-white">
-              {periods.length}
-            </dd>
-            <dt className="text-xs uppercase tracking-wide text-slate-400">
-              períodos
-            </dt>
-          </div>
-          <div>
-            <dd className="font-display text-3xl font-bold text-white">
-              {axes.length}
-            </dd>
-            <dt className="text-xs uppercase tracking-wide text-slate-400">
-              eixos temáticos
-            </dt>
-          </div>
-          <div>
-            <dd className="font-display text-3xl font-bold text-white">
-              {totalFacts}
-            </dd>
-            <dt className="text-xs uppercase tracking-wide text-slate-400">
-              registros com fonte
-            </dt>
-          </div>
-          <div>
-            <dd className="font-display text-3xl font-bold text-white">2003–22</dd>
-            <dt className="text-xs uppercase tracking-wide text-slate-400">
-              recorte histórico
-            </dt>
-          </div>
-        </dl>
-
-        <MethodWarning message="Este comparativo cobre apenas os períodos de 2003–2010 (primeiro governo Lula), 2011–2016 (governo Dilma) e 2019–2022 (governo Bolsonaro). Não há dados de 2023–2026 aqui." />
       </section>
 
-      <section className="space-y-4">
-        <h2 className="font-display text-2xl font-bold text-white">
-          Por período de governo
-        </h2>
-        <div className="grid gap-4 sm:grid-cols-3">
+      <section className="doc p-5">
+        <h2 className="font-serif text-lg font-semibold text-ink">Resumo</h2>
+        <div className="mt-3 grid gap-6 sm:grid-cols-3">
+          <div>
+            <p className="label">Recorte</p>
+            <p className="mt-1 text-sm text-muted">
+              2003–2010 (Lula), 2011–2016 (Dilma) e 2019–2022 (Bolsonaro).
+            </p>
+          </div>
+          <div>
+            <p className="label">Método</p>
+            <p className="mt-1 text-sm text-muted">
+              Fatos com fonte datada; ausência de dado declarada como tal.
+            </p>
+          </div>
+          <div>
+            <p className="label">Limite</p>
+            <p className="mt-1 text-sm text-muted">
+              Documento descritivo. Não afirma causalidade nem endossa governos.
+            </p>
+          </div>
+        </div>
+        <div className="mt-4 grid grid-cols-2 border-t border-rule pt-4 sm:grid-cols-4">
+          <dl className="pr-4">
+            <dt className="label">Períodos</dt>
+            <dd className="font-mono text-2xl text-ink">{periods.length}</dd>
+          </dl>
+          <dl className="border-l border-rule px-4">
+            <dt className="label">Eixos</dt>
+            <dd className="font-mono text-2xl text-ink">{axes.length}</dd>
+          </dl>
+          <dl className="border-l border-rule px-4">
+            <dt className="label">Registros</dt>
+            <dd className="font-mono text-2xl text-ink">{facts.length}</dd>
+          </dl>
+          <dl className="border-l border-rule pl-4">
+            <dt className="label">Anos</dt>
+            <dd className="font-mono text-2xl text-ink">03–22</dd>
+          </dl>
+        </div>
+      </section>
+
+      <MethodWarning message="Este comparativo cobre apenas os períodos de 2003–2010 (primeiro governo Lula), 2011–2016 (governo Dilma) e 2019–2022 (governo Bolsonaro). Não há dados de 2023–2026 aqui." />
+
+      <section className="doc-section">
+        <h2 className="label mb-3">Sumário</h2>
+        <ol className="divide-y divide-rule border-y border-rule">
+          {sections.map((item) => (
+            <li key={item.to}>
+              <Link
+                to={item.to}
+                className="group flex items-baseline gap-4 py-3 no-underline"
+              >
+                <span className="section-no w-6 shrink-0">{item.no}</span>
+                <span className="font-serif text-base font-semibold text-ink group-hover:text-link">
+                  {item.label}
+                </span>
+                <span className="ml-auto text-right text-xs text-muted">
+                  {item.desc}
+                </span>
+              </Link>
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      <section className="doc-section">
+        <h2 className="label mb-3">Por período de governo</h2>
+        <div className="divide-y divide-rule border-y border-rule">
           {periods.map((period) => (
             <Link
               key={period.slug}
               to={`/governo/${period.slug}`}
-              className="surface surface-hover group p-5"
+              className="flex flex-wrap items-baseline gap-x-4 gap-y-1 py-3 no-underline"
             >
-              <PeriodBadge period={period.slug} />
-              <h3 className="mt-3 font-display text-lg font-semibold text-white">
+              <span className="font-serif text-base font-semibold text-ink">
                 {period.label}
-              </h3>
-              <p className="mt-2 text-sm text-slate-300">
+              </span>
+              <span className="font-mono text-[11px] uppercase tracking-[0.08em] text-faint">
                 {facts.filter((fact) => fact.period === period.slug).length}{" "}
-                registro(s) documentado(s).
-              </p>
-              <span className="mt-4 inline-block text-sm font-semibold text-brand-green-light">
-                Ver período →
+                registro(s)
+              </span>
+              <span className="doclink ml-auto font-mono text-[11px] uppercase tracking-[0.08em]">
+                Ver →
               </span>
             </Link>
           ))}
         </div>
       </section>
 
-      <section className="space-y-4">
-        <h2 className="font-display text-2xl font-bold text-white">
-          Comparar por eixo
-        </h2>
-        <p className="text-slate-300">
-          Escolha um eixo temático para ver, lado a lado, o que o material
-          registra em cada período.
-        </p>
-        <ul className="grid gap-3 sm:grid-cols-2">
+      <section className="doc-section">
+        <h2 className="label mb-3">Comparar por eixo</h2>
+        <ul className="grid gap-px border border-rule bg-rule sm:grid-cols-2">
           {axes.map((axis) => (
-            <li key={axis.slug}>
+            <li key={axis.slug} className="bg-paper">
               <Link
                 to={`/comparar/${axis.slug}`}
-                className="surface surface-hover tap block px-4 py-3"
+                className="block p-4 no-underline"
               >
-                <span className="block font-medium text-slate-100">
+                <span className="font-serif text-sm font-semibold text-ink">
                   {axis.label}
                 </span>
-                <span className="block text-sm text-slate-400">
+                <span className="mt-1 block text-xs text-muted">
                   {axis.question}
                 </span>
               </Link>
             </li>
           ))}
         </ul>
-        <Link to="/comparar" className="btn-primary">
-          Ver tabela completa
-        </Link>
       </section>
 
-      <section className="relative overflow-hidden rounded-2xl border border-violet-400/30 bg-gradient-to-br from-violet-500/15 via-transparent to-fuchsia-500/10 p-6">
-        <h2 className="font-display text-2xl font-bold text-white">
+      <section className="border border-violet-300 border-l-4 border-l-violet-500 bg-violet-50/50 p-5">
+        <h2 className="font-serif text-lg font-semibold text-ink">
           Eleições 2026: propostas x histórico
         </h2>
-        <p className="mt-2 max-w-3xl text-sm text-slate-300">
+        <p className="mt-2 max-w-3xl text-sm text-muted">
           Compare, eixo por eixo, o que o material registra como ato de governo
           (2003–2022) com o que as campanhas de 2026 propõem. São coisas
           diferentes: promessa de campanha não é ato executado.

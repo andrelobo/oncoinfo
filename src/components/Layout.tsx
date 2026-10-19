@@ -13,11 +13,13 @@ function ScrollToTop() {
 
 export function Layout() {
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="flex min-h-screen flex-col bg-canvas">
       <ScrollToTop />
       <Header />
-      <main className="mx-auto w-full max-w-5xl flex-1 px-4 py-8 sm:py-12">
-        <Outlet />
+      <main className="mx-auto w-full max-w-5xl flex-1 px-4 py-8 sm:py-10">
+        <div className="doc px-5 py-8 sm:px-10 sm:py-12">
+          <Outlet />
+        </div>
       </main>
       <Footer />
     </div>

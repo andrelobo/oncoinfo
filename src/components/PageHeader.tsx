@@ -2,18 +2,26 @@ export function PageHeader({
   eyebrow,
   title,
   lead,
+  meta,
 }: {
   eyebrow?: string;
   title: string;
   lead?: string;
+  meta?: string;
 }) {
   return (
-    <header className="space-y-3">
-      {eyebrow ? <p className="eyebrow">{eyebrow}</p> : null}
-      <h1 className="font-display text-3xl font-bold leading-tight text-white sm:text-4xl">
+    <header className="pb-6">
+      {eyebrow ? <p className="label mb-2">{eyebrow}</p> : null}
+      <h1 className="font-serif text-3xl font-semibold text-ink sm:text-4xl">
         {title}
       </h1>
-      {lead ? <p className="lede">{lead}</p> : null}
+      {lead ? <p className="prose-lead mt-3">{lead}</p> : null}
+      {meta ? (
+        <p className="mt-3 font-mono text-[11px] uppercase tracking-[0.1em] text-faint">
+          {meta}
+        </p>
+      ) : null}
+      <div className="mt-6 border-t border-rule" />
     </header>
   );
 }

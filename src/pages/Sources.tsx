@@ -17,34 +17,39 @@ export function Sources() {
         lead="Todas as fontes citadas no site, com tipo, data e o documento correspondente. Os PDFs devem ser colocados em public/docs/ para que os links funcionem."
       />
 
-      <ul className="space-y-3">
+      <ul className="divide-y divide-rule border-y border-rule">
         {sources.map((source) => (
-          <li key={source.id} className="surface surface-hover p-4">
-            <div className="flex flex-wrap items-center gap-2">
-              <span className="inline-flex items-center rounded-full bg-white/[0.06] px-2.5 py-0.5 text-xs font-medium text-slate-200 ring-1 ring-inset ring-white/15">
+          <li key={source.id} className="py-4">
+            <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
+              <span className="inline-flex items-center border border-rule-strong bg-canvas px-1.5 py-0.5 font-mono text-[10px] font-medium uppercase tracking-[0.1em] text-muted">
                 {sourceKindLabel(source.kind)}
               </span>
-              <time dateTime={source.date} className="text-xs text-slate-400">
+              <time
+                dateTime={source.date}
+                className="font-mono text-[11px] uppercase tracking-[0.08em] text-faint"
+              >
                 {formatMonthYear(source.date)}
               </time>
+              <span className="font-mono text-[11px] text-faint">
+                #{source.id}
+              </span>
             </div>
-            <h2 className="mt-2 font-display text-base font-semibold text-white">
+            <h2 className="mt-2 font-serif text-base font-semibold text-ink">
               {source.title}
             </h2>
-            <p className="text-sm text-slate-400">
-              {source.outlet ? `${source.outlet} · ` : ""}
-              <span className="text-slate-500">#{source.id}</span>
-            </p>
-            {source.note ? (
-              <p className="mt-1 text-xs text-amber-200/90">{source.note}</p>
+            {source.outlet ? (
+              <p className="text-sm text-muted">{source.outlet}</p>
             ) : null}
-            <div className="mt-3 flex flex-wrap gap-x-4">
+            {source.note ? (
+              <p className="mt-1 text-xs text-amber-800">{source.note}</p>
+            ) : null}
+            <div className="mt-2 flex flex-wrap gap-x-4">
               {source.file ? (
                 <a
                   href={source.file}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="tap text-sm font-medium text-brand-green-light hover:underline"
+                  className="doclink font-mono text-[11px] uppercase tracking-[0.06em]"
                 >
                   Abrir documento (PDF) ↗
                 </a>
@@ -54,7 +59,7 @@ export function Sources() {
                   href={source.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="tap text-sm font-medium text-brand-green-light hover:underline"
+                  className="doclink font-mono text-[11px] uppercase tracking-[0.06em]"
                 >
                   Abrir fonte ↗
                 </a>

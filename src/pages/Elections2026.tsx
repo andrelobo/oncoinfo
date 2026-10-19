@@ -35,19 +35,17 @@ export function Elections2026() {
         );
 
         return (
-          <section key={axis.slug} className="space-y-4">
-            <div className="border-b border-white/10 pb-2">
-              <h2 className="font-display text-xl font-bold text-white">
+          <section key={axis.slug} className="doc-section">
+            <div className="mb-4 border-b border-rule pb-2">
+              <h2 className="font-serif text-xl font-semibold text-ink">
                 {axis.label}
               </h2>
-              <p className="text-sm text-slate-400">{axis.question}</p>
+              <p className="text-sm text-muted">{axis.question}</p>
             </div>
 
             <div className="grid gap-6 lg:grid-cols-2">
               <div className="space-y-3">
-                <h3 className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-400">
-                  Histórico documentado (2003–2022)
-                </h3>
+                <h3 className="label">Histórico documentado · 2003–2022</h3>
                 {historyFacts.length > 0 ? (
                   <div className="grid gap-4">
                     {historyFacts.map((fact) => (
@@ -55,15 +53,15 @@ export function Elections2026() {
                     ))}
                   </div>
                 ) : (
-                  <p className="surface px-4 py-3 text-sm text-slate-400">
+                  <p className="border border-rule bg-canvas px-4 py-3 font-mono text-[11px] uppercase tracking-[0.08em] text-faint">
                     Sem dado suficiente no material.
                   </p>
                 )}
               </div>
 
               <div className="space-y-3">
-                <h3 className="text-xs font-semibold uppercase tracking-[0.18em] text-violet-300">
-                  Propostas de campanha 2026
+                <h3 className="label text-violet-700">
+                  Propostas de campanha · 2026
                 </h3>
                 {axisProposals.length > 0 ? (
                   <div className="grid gap-4">
@@ -72,7 +70,7 @@ export function Elections2026() {
                     ))}
                   </div>
                 ) : (
-                  <p className="surface px-4 py-3 text-sm text-slate-400">
+                  <p className="border border-rule bg-canvas px-4 py-3 font-mono text-[11px] uppercase tracking-[0.08em] text-faint">
                     Sem dado suficiente no material.
                   </p>
                 )}
@@ -82,14 +80,14 @@ export function Elections2026() {
         );
       })}
 
-      <p className="surface px-4 py-3 text-sm text-slate-300">
+      <p className="border border-rule bg-canvas px-4 py-3 text-sm text-muted">
         Fonte das propostas e das análises de especialistas:{" "}
-        <span className="font-medium text-slate-100">
+        <span className="font-medium text-ink">
           Comparativo de Propostas para a Saúde e o SUS — Panorama Eleitoral de
           2026
         </span>{" "}
         (documento de análise). PDF em{" "}
-        <code className="rounded bg-white/10 px-1">
+        <code className="font-mono text-[11px]">
           /docs/comparativo_propostas_saude_2026.pdf
         </code>
         .
