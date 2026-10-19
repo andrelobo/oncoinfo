@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { AxisIcon } from "../components/AxisIcon";
+import { AxisIllustration, HeroIllustration } from "../components/Illustration";
 import { axes } from "../content/axes";
 import { periods } from "../content/periods";
 import { useSeo } from "../lib/seo";
@@ -13,18 +14,21 @@ export function Home() {
 
   return (
     <div className="space-y-12">
-      <section>
-        <p className="label mb-3">Relatório documental · Oncologia no SUS</p>
-        <h1 className="max-w-3xl font-serif text-4xl font-semibold leading-tight text-ink sm:text-5xl">
-          O que os documentos registram sobre o câncer no SUS
-        </h1>
-        <p className="prose-lead mt-4">
-          O que o SUS fez no tratamento do câncer em três governos. Só fatos com
-          fonte e data — e, quando falta dado, dizemos isso.
-        </p>
-        <Link to="/comparar" className="btn-primary mt-6">
-          Começar a comparar <ArrowRight className="h-5 w-5" />
-        </Link>
+      <section className="flex flex-col items-start gap-8 md:flex-row md:items-center">
+        <div className="flex-1">
+          <p className="label mb-3">Relatório documental · Oncologia no SUS</p>
+          <h1 className="max-w-3xl font-serif text-4xl font-semibold leading-tight text-ink sm:text-5xl">
+            O que os documentos registram sobre o câncer no SUS
+          </h1>
+          <p className="prose-lead mt-4">
+            O que o SUS fez no tratamento do câncer em três governos. Só fatos
+            com fonte e data — e, quando falta dado, dizemos isso.
+          </p>
+          <Link to="/comparar" className="btn-primary mt-6">
+            Começar a comparar <ArrowRight className="h-5 w-5" />
+          </Link>
+        </div>
+        <HeroIllustration className="w-full max-w-[280px] shrink-0 md:max-w-[320px]" />
       </section>
 
       <section className="doc-section">
@@ -54,14 +58,20 @@ export function Home() {
             <li key={axis.slug} className="bg-paper">
               <Link
                 to={`/comparar/${axis.slug}`}
-                className="block p-4 no-underline"
+                className="flex items-start gap-3 p-4 no-underline"
               >
-                <span className="flex items-center gap-2 font-serif text-sm font-semibold text-ink">
-                  <AxisIcon axis={axis.slug} className="h-4 w-4 text-accent" />
-                  {axis.label}
-                </span>
-                <span className="mt-1 block text-xs text-muted">
-                  {axis.question}
+                <AxisIllustration
+                  slug={axis.slug}
+                  className="h-16 w-20 shrink-0"
+                />
+                <span className="min-w-0">
+                  <span className="flex items-center gap-2 font-serif text-sm font-semibold text-ink">
+                    <AxisIcon axis={axis.slug} className="h-4 w-4 text-accent" />
+                    {axis.label}
+                  </span>
+                  <span className="mt-1 block text-xs text-muted">
+                    {axis.question}
+                  </span>
                 </span>
               </Link>
             </li>
