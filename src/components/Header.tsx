@@ -1,12 +1,8 @@
-import { Link, NavLink } from "react-router-dom";
+import { useState } from "react";
+import { Link, NavLink, useLocation } from "react-router-dom";
 
 const navItems = [
   { to: "/comparar", label: "Comparar" },
-  { to: "/linha-do-tempo", label: "Linha do tempo" },
-  { to: "/impacto-real", label: "Impacto real" },
-  { to: "/eleicoes-2026", label: "Eleições 2026" },
-  { to: "/flavio-2026", label: "Se Flávio for eleito" },
-  { to: "/estados", label: "Estados" },
   { to: "/metodologia", label: "Metodologia" },
   { to: "/fontes", label: "Fontes" },
   { to: "/perguntas-frequentes", label: "Dúvidas" },
@@ -14,10 +10,14 @@ const navItems = [
 ];
 
 export function Header() {
+  const location = useLocation();
+  const [openPath, setOpenPath] = useState<string | null>(null);
+  const open = openPath === location.pathname;
+
   return (
     <header className="sticky top-0 z-50 border-b border-rule bg-paper/95 backdrop-blur-sm">
       <div className="mx-auto max-w-5xl px-4 py-3">
-        <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
+        <div className="flex items-center justify-between gap-x-4">
           <Link to="/" className="tap flex items-center gap-3">
             <img
               src="/logo.png"
@@ -33,13 +33,55 @@ export function Header() {
               </span>
             </span>
           </Link>
-          <p className="hidden font-mono text-[11px] uppercase tracking-[0.1em] text-faint sm:block">
-            Comparativo documental · 2003–2022
-          </p>
+
+          <div className="flex items-center gap-3">
+            <p className="hidden font-mono text-[11px] uppercase tracking-[0.1em] text-faint lg:block">
+              Comparativo documental · 2003–2022
+            </p>
+            <button
+              type="button"
+              onClick={() => setOpenPath(open ? null : location.pathname)}
+              aria-expanded={open}
+              aria-controls="main-menu"
+              className="tap flex items-center gap-2 border border-rule-strong bg-paper px-3 py-2 font-mono text-[11px] font-medium uppercase tracking-[0.12em] text-ink transition hover:border-ink md:hidden"
+            >
+              <span aria-hidden="true">{open ? "✕" : "☰"}</span>
+              {open ? "Fechar" : "Menu"}
+            </button>
+          </div>
         </div>
+
+        {/* Menu hambúrguer (mobile) */}
+        {open ? (
+          <nav
+            id="main-menu"
+            aria-label="Navegação principal"
+            className="mt-3 border-t border-rule pt-2 md:hidden"
+          >
+            <ul className="divide-y divide-rule">
+              {navItems.map((item) => (
+                <li key={item.to}>
+                  <NavLink
+                    to={item.to}
+                    onClick={() => setOpenPath(null)}
+                    className={({ isActive }) =>
+                      `block py-3 font-mono text-[11px] font-medium uppercase tracking-[0.12em] transition ${
+                        isActive ? "text-ink" : "text-muted hover:text-ink"
+                      }`
+                    }
+                  >
+                    {item.label}
+                  </NavLink>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        ) : null}
+
+        {/* Navegação inline (desktop) */}
         <nav
           aria-label="Navegação principal"
-          className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1"
+          className="mt-2 hidden flex-wrap items-center gap-x-4 md:flex"
         >
           {navItems.map((item) => (
             <NavLink
