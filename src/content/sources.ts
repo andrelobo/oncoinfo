@@ -134,7 +134,7 @@ export const sources: Source[] = [
       "FCECON e o SUS — as três ondas de avanço do CECON/FCECON (Amazonas): Fundação nos anos 1990, virada digital em 2013 e modernização em 2025–2026",
     outlet: "Material cedido para inclusão no site",
     date: "2026-10",
-    file: "/docs/amazonas-fcecon.pdf",
+    file: "/docs/sus_e_principais_impactos_na_fcecon.pdf",
     note: "Texto fornecido pela equipe. Descreve etapas históricas e entregas informadas; PDF a ser anexado em /docs.",
   },
 ];
