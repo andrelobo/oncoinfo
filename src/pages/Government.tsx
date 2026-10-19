@@ -57,6 +57,11 @@ export function Government() {
         lead={`O que foi feito entre ${formatRange(period.start, period.end)}, por tema.`}
       />
       <DirectionChart facts={periodFacts} onlyPeriod={period.slug} />
+      {period.continuityNote ? (
+        <p className="border-l-2 border-rule-strong bg-canvas px-4 py-3 text-sm text-muted">
+          {period.continuityNote}
+        </p>
+      ) : null}
       {periodFacts.length === 0 ? (
         <p className="border border-rule bg-canvas px-4 py-3 font-mono text-[11px] uppercase tracking-[0.08em] text-faint">
           Sem dado suficiente no material.

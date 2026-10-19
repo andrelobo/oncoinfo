@@ -27,6 +27,8 @@ export const periods: Period[] = [
     end: 2022,
     warning:
       "Foco em decisões orçamentárias, vetos e atos normativos documentados no material coletado.",
+    continuityNote:
+      "Nos temas aqui, o material só registra continuidade de políticas anteriores e decisões negativas. Não há, neste material, ação nova deste governo a destacar.",
   },
 ];
 

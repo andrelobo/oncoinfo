@@ -40,6 +40,11 @@ export type Fact = {
   headline: string;
   detail: string;
   direction: Direction;
+  /**
+   * Quando `true`, o registro descreve algo que já existia antes do período e
+   * não é ação nova deste governo (ex.: continuidade de política anterior).
+   */
+  continuity?: boolean;
   sourceIds: string[]; // NUNCA vazio
   limitation?: string;
 };
@@ -51,6 +56,11 @@ export type Period = {
   start: number;
   end: number;
   warning: string;
+  /**
+   * Nota curta sobre o que o material NÃO atribui como ação nova deste governo
+   * (ex.: continuidade de políticas anteriores), para não dar crédito indevido.
+   */
+  continuityNote?: string;
 };
 
 export type Axis = {

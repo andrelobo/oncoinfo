@@ -1,4 +1,5 @@
 import type { Direction, Fact } from "../lib/types";
+import { ContinuityBadge } from "./ContinuityBadge";
 import { DirectionBadge } from "./DirectionBadge";
 import { PeriodBadge } from "./PeriodBadge";
 import { SourceList } from "./SourceList";
@@ -24,6 +25,7 @@ export function FactCard({ fact }: { fact: Fact }) {
       <div className="flex flex-wrap items-center gap-2">
         <PeriodBadge period={fact.period} />
         <DirectionBadge direction={fact.direction} />
+        {fact.continuity ? <ContinuityBadge /> : null}
       </div>
       <h3 className="mt-3 font-serif text-base font-semibold text-ink">
         {fact.headline}
