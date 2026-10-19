@@ -2,9 +2,11 @@ import { Link, useParams } from "react-router-dom";
 import { FactCard } from "../components/FactCard";
 import { MethodWarning } from "../components/MethodWarning";
 import { PageHeader } from "../components/PageHeader";
+import { ProposalCard } from "../components/ProposalCard";
 import { axes } from "../content/axes";
 import { facts } from "../content/facts";
 import { periodBySlug, periods } from "../content/periods";
+import { proposals2026 } from "../content/proposals2026";
 import { formatMonthYear, formatRange } from "../lib/format";
 import { useSeo } from "../lib/seo";
 import type { PeriodSlug } from "../lib/types";
@@ -40,6 +42,10 @@ export function Government() {
   }
 
   const periodFacts = facts.filter((fact) => fact.period === period.slug);
+  const periodAxes = new Set(periodFacts.map((fact) => fact.axis));
+  const periodProposals = proposals2026.filter((proposal) =>
+    periodAxes.has(proposal.axis),
+  );
 
   return (
     <div className="space-y-8">
@@ -79,6 +85,26 @@ export function Government() {
             ))}
         </div>
       )}
+
+      <section className="doc-section">
+        <h2 className="label mb-1">Propostas de campanha 2026</h2>
+        <p className="mb-3 text-sm text-muted">
+          Para os mesmos eixos deste período, o que os pré-candidatos propõem
+          para 2026. São intenções declaradas em documento de campanha, não atos
+          de governo — por isso ficam separadas dos registros históricos acima.
+        </p>
+        {periodProposals.length > 0 ? (
+          <div className="grid gap-4">
+            {periodProposals.map((proposal) => (
+              <ProposalCard key={proposal.id} proposal={proposal} />
+            ))}
+          </div>
+        ) : (
+          <p className="border border-rule bg-canvas px-4 py-3 font-mono text-[11px] uppercase tracking-[0.08em] text-faint">
+            Sem dado suficiente no material.
+          </p>
+        )}
+      </section>
 
       <p className="font-mono text-[11px] uppercase tracking-[0.08em] text-faint">
         Última referência de data no material: 2022-09 (
