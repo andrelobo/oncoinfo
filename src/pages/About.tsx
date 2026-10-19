@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { MethodWarning } from "../components/MethodWarning";
 import { PageHeader } from "../components/PageHeader";
 import { useSeo } from "../lib/seo";
 
@@ -16,7 +15,6 @@ export function About() {
         title="Sobre"
         lead="O “Onco-Info” é um site informativo e documental que reúne, com fonte e data, registros sobre políticas de oncologia em diferentes períodos de governo federal no Brasil."
       />
-      <MethodWarning message="Este site não é propaganda oficial de partido, não é laudo técnico e não substitui a leitura dos documentos originais." />
 
       <section className="doc-section">
         <h2 className="label mb-2">O que o site é</h2>

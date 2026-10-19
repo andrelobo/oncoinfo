@@ -1,4 +1,3 @@
-import { MethodWarning } from "../components/MethodWarning";
 import { PageHeader } from "../components/PageHeader";
 import { useSeo } from "../lib/seo";
 
@@ -16,7 +15,6 @@ export function Methodology() {
         lead="Este site é documental e comparativo. Ele descreve o que documentos oficiais e clippings registram sobre oncologia no SUS em três períodos de governo federal."
       />
 
-      <MethodWarning message="O site não é propaganda partidária, não é laudo técnico e não afirma causalidade entre ações de governo e desfechos individuais." />
 
       <section className="doc-section">
         <h2 className="label mb-2">1 · Recorte de períodos</h2>

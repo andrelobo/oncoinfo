@@ -1,5 +1,4 @@
 import { FactCard } from "../components/FactCard";
-import { MethodWarning } from "../components/MethodWarning";
 import { PageHeader } from "../components/PageHeader";
 import { ProposalCard } from "../components/ProposalCard";
 import { axes } from "../content/axes";
@@ -26,7 +25,6 @@ export function Elections2026() {
         title="Propostas de campanha x histórico documentado"
         lead="Esta seção coloca, eixo por eixo, o que o material registra como ato de governo no SUS (2003–2022) ao lado do que as campanhas de 2026 propõem. São coisas diferentes: um ato executado não equivale a uma promessa de campanha, e vice-versa."
       />
-      <MethodWarning message="Proposta de campanha não é ato de governo. Os itens de 2026 são intenções declaradas em documento de campanha/análise, sem execução registrada. A comparação é descritiva e não indica causalidade nem endossa candidaturas." />
 
       {relevantAxes.map((axis) => {
         const historyFacts = facts.filter((fact) => fact.axis === axis.slug);

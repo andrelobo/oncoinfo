@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { MethodWarning } from "../components/MethodWarning";
 import { axes } from "../content/axes";
 import { facts } from "../content/facts";
 import { periods } from "../content/periods";
@@ -10,8 +9,10 @@ const sections = [
   { to: "/linha-do-tempo", no: "02", label: "Linha do tempo", desc: "Marcos de 2005 a 2022" },
   { to: "/impacto-real", no: "03", label: "Impacto real", desc: "O que dá e não dá para afirmar" },
   { to: "/eleicoes-2026", no: "04", label: "Eleições 2026", desc: "Propostas x histórico" },
-  { to: "/fontes", no: "05", label: "Fontes", desc: "Lista de referências" },
-  { to: "/metodologia", no: "06", label: "Metodologia", desc: "Regras editoriais" },
+  { to: "/flavio-2026", no: "05", label: "Se Flávio for eleito", desc: "O que pode mudar no SUS" },
+  { to: "/estados", no: "06", label: "Estados", desc: "Recortes estaduais" },
+  { to: "/fontes", no: "07", label: "Fontes", desc: "Lista de referências" },
+  { to: "/metodologia", no: "08", label: "Metodologia", desc: "Como lemos os dados" },
 ];
 
 export function Home() {
@@ -28,10 +29,8 @@ export function Home() {
           O que os documentos registram sobre o câncer no SUS
         </h1>
         <p className="prose-lead mt-4">
-          Comparativo, com base em documentos oficiais e clippings, do que foi
-          feito na atenção oncológica do SUS em três períodos de governo
-          federal. Cada afirmação tem fonte e data. Onde não há dado, escrevemos
-          exatamente isso.
+          O que o SUS fez no tratamento do câncer em três governos. Só fatos com
+          fonte e data — e, quando falta dado, dizemos isso.
         </p>
       </section>
 
@@ -41,19 +40,19 @@ export function Home() {
           <div>
             <p className="label">Recorte</p>
             <p className="mt-1 text-sm text-muted">
-              2003–2010 (Lula), 2011–2016 (Dilma) e 2019–2022 (Bolsonaro).
+              2010 (Lula), 2016 (Dilma) e 2022 (Bolsonaro).
             </p>
           </div>
           <div>
-            <p className="label">Método</p>
+            <p className="label">Conteúdo</p>
             <p className="mt-1 text-sm text-muted">
-              Fatos com fonte datada; ausência de dado declarada como tal.
+              Fatos por eixo e propostas de campanha de 2026.
             </p>
           </div>
           <div>
-            <p className="label">Limite</p>
+            <p className="label">Fonte</p>
             <p className="mt-1 text-sm text-muted">
-              Documento descritivo. Não afirma causalidade nem endossa governos.
+              Documento e data em cada afirmação.
             </p>
           </div>
         </div>
@@ -77,7 +76,6 @@ export function Home() {
         </div>
       </section>
 
-      <MethodWarning message="Este comparativo cobre apenas os períodos de 2003–2010 (primeiro governo Lula), 2011–2016 (governo Dilma) e 2019–2022 (governo Bolsonaro). Não há dados de 2023–2026 aqui." />
 
       <section className="doc-section">
         <h2 className="label mb-3">Sumário</h2>
@@ -151,13 +149,17 @@ export function Home() {
           Eleições 2026: propostas x histórico
         </h2>
         <p className="mt-2 max-w-3xl text-sm text-muted">
-          Compare, eixo por eixo, o que o material registra como ato de governo
-          (2003–2022) com o que as campanhas de 2026 propõem. São coisas
-          diferentes: promessa de campanha não é ato executado.
+          O que já foi feito (2003–2022) ao lado do que as campanhas prometem
+          para 2026. Promessa não é ato de governo.
         </p>
-        <Link to="/eleicoes-2026" className="btn-primary mt-4">
-          Ver comparativo 2026
-        </Link>
+        <div className="mt-4 flex flex-wrap gap-3">
+          <Link to="/eleicoes-2026" className="btn-primary">
+            Comparar propostas 2026
+          </Link>
+          <Link to="/flavio-2026" className="btn-ghost">
+            Se Flávio for eleito
+          </Link>
+        </div>
       </section>
     </div>
   );

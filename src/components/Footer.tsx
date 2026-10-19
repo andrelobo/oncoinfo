@@ -9,7 +9,7 @@ export function Footer() {
             <img
               src="/logo.png"
               alt="Logo Onco-Info"
-              className="h-12 w-12 rounded-sm border border-rule object-cover"
+              className="h-[96px] w-[96px] rounded-sm border border-rule object-cover"
             />
             <div>
               <p className="font-serif text-base font-semibold text-ink">
@@ -34,6 +34,11 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link className="tap text-muted hover:text-ink" to="/transparencia">
+                  Transparência
+                </Link>
+              </li>
+              <li>
                 <Link className="tap text-muted hover:text-ink" to="/sobre">
                   Sobre e correções
                 </Link>
@@ -43,8 +48,12 @@ export function Footer() {
         </div>
 
         <p className="mt-6 max-w-3xl border-t border-rule pt-4 text-sm text-muted">
-          Site informativo e documental. Não é propaganda oficial de partido nem
-          laudo técnico.
+          Site informativo e documental, com fonte e data em cada afirmação.
+          Avisos de método em{" "}
+          <Link to="/transparencia" className="doclink">
+            Transparência
+          </Link>
+          .
         </p>
         <p className="mt-2 font-mono text-[11px] text-faint">
           Conteúdo revisado em <time dateTime="2026-10">outubro de 2026</time>.

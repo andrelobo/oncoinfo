@@ -1,6 +1,5 @@
 import { Link, useParams } from "react-router-dom";
 import { FactCard } from "../components/FactCard";
-import { MethodWarning } from "../components/MethodWarning";
 import { PageHeader } from "../components/PageHeader";
 import { axisBySlug, axes } from "../content/axes";
 import { facts } from "../content/facts";
@@ -51,8 +50,6 @@ export function CompareAxis() {
         title={axisData.label}
         lead={axisData.question}
       />
-      <MethodWarning message="Os registros abaixo vêm de documentos e clippings do material coletado. Sem fonte específica significa apenas “sem dado suficiente no material”." />
-
       <div className="space-y-8">
         {periods.map((period) => {
           const periodFacts = facts.filter(

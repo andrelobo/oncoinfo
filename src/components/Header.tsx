@@ -5,6 +5,7 @@ const navItems = [
   { to: "/linha-do-tempo", label: "Linha do tempo" },
   { to: "/impacto-real", label: "Impacto real" },
   { to: "/eleicoes-2026", label: "Eleições 2026" },
+  { to: "/flavio-2026", label: "Se Flávio for eleito" },
   { to: "/estados", label: "Estados" },
   { to: "/metodologia", label: "Metodologia" },
   { to: "/fontes", label: "Fontes" },
@@ -21,7 +22,7 @@ export function Header() {
             <img
               src="/logo.png"
               alt="Logo Onco-Info"
-              className="h-12 w-12 rounded-sm border border-rule object-cover"
+              className="h-[96px] w-[96px] rounded-sm border border-rule object-cover"
             />
             <span className="leading-tight">
               <span className="block font-serif text-lg font-semibold tracking-tight text-ink">

@@ -1,5 +1,4 @@
 import { Link, useParams } from "react-router-dom";
-import { MethodWarning } from "../components/MethodWarning";
 import { PageHeader } from "../components/PageHeader";
 import { SourceList } from "../components/SourceList";
 import { stateBySlug, states } from "../content/states";
@@ -45,7 +44,6 @@ export function State() {
         lead={state.summary}
         meta={state.institution}
       />
-      <MethodWarning message={state.warning} />
 
       {state.context ? (
         <section className="doc-section">

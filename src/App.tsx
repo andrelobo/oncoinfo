@@ -5,6 +5,7 @@ import { Compare } from "./pages/Compare";
 import { CompareAxis } from "./pages/CompareAxis";
 import { Elections2026 } from "./pages/Elections2026";
 import { Faq } from "./pages/Faq";
+import { Flavio2026 } from "./pages/Flavio2026";
 import { Government } from "./pages/Government";
 import { Home } from "./pages/Home";
 import { Methodology } from "./pages/Methodology";
@@ -13,6 +14,7 @@ import { Sources } from "./pages/Sources";
 import { State } from "./pages/State";
 import { States } from "./pages/States";
 import { Timeline } from "./pages/Timeline";
+import { Transparency } from "./pages/Transparency";
 
 export default function App() {
   return (
@@ -26,11 +28,13 @@ export default function App() {
           <Route path="/linha-do-tempo" element={<Timeline />} />
           <Route path="/impacto-real" element={<RealImpact />} />
           <Route path="/eleicoes-2026" element={<Elections2026 />} />
+          <Route path="/flavio-2026" element={<Flavio2026 />} />
           <Route path="/estados" element={<States />} />
           <Route path="/estados/:slug" element={<State />} />
           <Route path="/metodologia" element={<Methodology />} />
           <Route path="/fontes" element={<Sources />} />
           <Route path="/perguntas-frequentes" element={<Faq />} />
+          <Route path="/transparencia" element={<Transparency />} />
           <Route path="/sobre" element={<About />} />
           <Route path="*" element={<Home />} />
         </Route>

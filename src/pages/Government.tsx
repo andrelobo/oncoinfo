@@ -1,6 +1,5 @@
 import { Link, useParams } from "react-router-dom";
 import { FactCard } from "../components/FactCard";
-import { MethodWarning } from "../components/MethodWarning";
 import { PageHeader } from "../components/PageHeader";
 import { ProposalCard } from "../components/ProposalCard";
 import { axes } from "../content/axes";
@@ -54,8 +53,6 @@ export function Government() {
         title={period.label}
         lead={`Período de ${formatRange(period.start, period.end)}. Abaixo estão os registros documentados no material coletado, organizados por eixo.`}
       />
-      <MethodWarning message={period.warning} />
-
       {periodFacts.length === 0 ? (
         <p className="border border-rule bg-canvas px-4 py-3 font-mono text-[11px] uppercase tracking-[0.08em] text-faint">
           Sem dado suficiente no material.

@@ -1,5 +1,4 @@
 import { FactCard } from "../components/FactCard";
-import { MethodWarning } from "../components/MethodWarning";
 import { PageHeader } from "../components/PageHeader";
 import { facts } from "../content/facts";
 import { useSeo } from "../lib/seo";
@@ -19,7 +18,6 @@ export function RealImpact() {
         title="Impacto real: o que dá e o que não dá para afirmar"
         lead="Uma lei, portaria ou veto é um ato documentado. O efeito dele sobre a vida das pessoas depende de execução, orçamento, rede e tempo. Separamos as duas coisas e não afirmamos relação de causa e efeito entre ações de governo e desfechos individuais."
       />
-      <MethodWarning message="Atos normativos não equivalem, por si sós, a resultados na ponta. Sem dado de execução, tratamos o registro como descrição do ato, não como prova de desfecho." />
 
       <section className="doc-section">
         <h2 className="label mb-3">Princípios de leitura</h2>
