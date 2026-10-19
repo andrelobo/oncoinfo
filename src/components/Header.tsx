@@ -13,13 +13,27 @@ const navItems = [
 
 export function Header() {
   return (
-    <header className="border-b border-slate-200 bg-white">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-ink-950/70 backdrop-blur-xl">
       <div className="mx-auto max-w-5xl px-4 py-3">
-        <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-          <Link to="/" className="tap-target text-lg font-bold text-slate-900">
-            Oncologia no SUS
+        <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
+          <Link to="/" className="tap group flex items-center gap-3">
+            <span className="grid h-10 w-10 place-items-center overflow-hidden rounded-xl bg-white ring-1 ring-white/20">
+              <img
+                src="/logo.png"
+                alt="Logo Onco-Info"
+                className="h-full w-full object-cover"
+              />
+            </span>
+            <span className="leading-tight">
+              <span className="block font-display text-lg font-bold text-white">
+                Onco-Info
+              </span>
+              <span className="block text-[11px] font-medium uppercase tracking-[0.18em] text-slate-400">
+                Informação salva vidas
+              </span>
+            </span>
           </Link>
-          <p className="text-xs text-slate-500">
+          <p className="hidden text-xs text-slate-500 sm:block">
             Comparativo documental · 2003–2022
           </p>
         </div>
@@ -30,10 +44,10 @@ export function Header() {
                 <NavLink
                   to={item.to}
                   className={({ isActive }) =>
-                    `tap-target rounded-md px-3 text-sm font-medium ${
+                    `tap rounded-full px-3 text-sm font-medium transition ${
                       isActive
-                        ? "bg-slate-900 text-white"
-                        : "text-slate-700 hover:bg-slate-100"
+                        ? "bg-white/10 text-white ring-1 ring-inset ring-white/20"
+                        : "text-slate-300 hover:bg-white/5 hover:text-white"
                     }`
                   }
                 >

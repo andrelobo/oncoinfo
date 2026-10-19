@@ -19,10 +19,10 @@ export function SourceList({ sourceIds }: { sourceIds: string[] }) {
       {items.map((source) => (
         <li
           key={source.id}
-          className="flex flex-col gap-0.5 border-l-2 border-slate-200 pl-3 text-sm"
+          className="flex flex-col gap-0.5 border-l-2 border-brand-green/40 pl-3 text-sm"
         >
-          <span className="font-medium text-slate-700">{source.title}</span>
-          <span className="text-xs text-slate-500">
+          <span className="font-medium text-slate-200">{source.title}</span>
+          <span className="text-xs text-slate-400">
             {sourceKindLabel(source.kind)}
             {source.outlet ? ` · ${source.outlet}` : ""} ·{" "}
             {formatMonthYear(source.date)}
@@ -33,9 +33,9 @@ export function SourceList({ sourceIds }: { sourceIds: string[] }) {
               href={source.file}
               target="_blank"
               rel="noopener noreferrer"
-              className="tap-target w-fit text-xs font-medium text-sky-700 hover:text-sky-900 hover:underline"
+              className="tap w-fit text-xs font-medium text-brand-green-light hover:underline"
             >
-              Abrir documento (PDF)
+              Abrir documento (PDF) ↗
             </a>
           ) : null}
           {source.url ? (
@@ -43,9 +43,9 @@ export function SourceList({ sourceIds }: { sourceIds: string[] }) {
               href={source.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="tap-target w-fit text-xs font-medium text-sky-700 hover:text-sky-900 hover:underline"
+              className="tap w-fit text-xs font-medium text-brand-green-light hover:underline"
             >
-              Abrir fonte
+              Abrir fonte ↗
             </a>
           ) : null}
         </li>

@@ -1,6 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import { FactCard } from "../components/FactCard";
 import { MethodWarning } from "../components/MethodWarning";
+import { PageHeader } from "../components/PageHeader";
 import { axisBySlug, axes } from "../content/axes";
 import { facts } from "../content/facts";
 import { periods } from "../content/periods";
@@ -22,18 +23,21 @@ export function CompareAxis() {
   if (!axisData) {
     return (
       <div className="space-y-4">
-        <h1 className="text-2xl font-bold text-slate-900">Eixo não encontrado</h1>
-        <p className="text-slate-700">
+        <PageHeader title="Eixo não encontrado" />
+        <p className="text-slate-300">
           O eixo informado não existe. Confira a lista na página{" "}
-          <Link to="/comparar" className="text-sky-700 hover:underline">
+          <Link to="/comparar" className="text-brand-green-light hover:underline">
             comparar
           </Link>
           .
         </p>
-        <ul className="list-inside list-disc space-y-1 text-sm text-slate-700">
+        <ul className="list-inside list-disc space-y-1 text-sm text-slate-300">
           {axes.map((item) => (
             <li key={item.slug}>
-              <Link to={`/comparar/${item.slug}`} className="text-sky-700 hover:underline">
+              <Link
+                to={`/comparar/${item.slug}`}
+                className="text-brand-green-light hover:underline"
+              >
                 {item.label}
               </Link>
             </li>
@@ -45,13 +49,12 @@ export function CompareAxis() {
 
   return (
     <div className="space-y-6">
-      <div className="space-y-3">
-        <h1 className="text-2xl font-bold text-slate-900 sm:text-3xl">
-          {axisData.label}
-        </h1>
-        <p className="max-w-3xl text-lg text-slate-600">{axisData.question}</p>
-        <MethodWarning message="Os registros abaixo vêm de documentos e clippings do material coletado. Sem fonte específica significa apenas “sem dado suficiente no material”." />
-      </div>
+      <PageHeader
+        eyebrow="Comparação por eixo"
+        title={axisData.label}
+        lead={axisData.question}
+      />
+      <MethodWarning message="Os registros abaixo vêm de documentos e clippings do material coletado. Sem fonte específica significa apenas “sem dado suficiente no material”." />
 
       <div className="space-y-8">
         {periods.map((period) => {
@@ -60,7 +63,7 @@ export function CompareAxis() {
           );
           return (
             <section key={period.slug} className="space-y-3">
-              <h2 className="text-lg font-semibold text-slate-900">
+              <h2 className="font-display text-lg font-semibold text-white">
                 {period.label}
               </h2>
               {periodFacts.length > 0 ? (
@@ -70,7 +73,7 @@ export function CompareAxis() {
                   ))}
                 </div>
               ) : (
-                <p className="rounded-md border border-slate-200 bg-white px-4 py-3 text-sm text-slate-400">
+                <p className="surface px-4 py-3 text-sm text-slate-400">
                   Sem dado suficiente no material.
                 </p>
               )}
