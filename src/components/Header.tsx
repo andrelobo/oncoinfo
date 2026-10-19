@@ -16,16 +16,16 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-rule bg-paper/95 backdrop-blur-sm">
-      <div className="mx-auto max-w-5xl px-4 py-2 md:py-3">
+      <div className="mx-auto max-w-5xl px-4 py-2 md:py-2.5">
         <div className="flex items-center justify-between gap-x-4">
           <Link to="/" className="tap flex items-center gap-3">
             <img
               src="/logo.png"
               alt="Logo Onco-Info"
-              className="h-20 w-20 shrink-0 object-contain lg:h-[88px] lg:w-[88px]"
+              className="h-20 w-20 shrink-0 object-contain md:h-[68px] md:w-[68px] lg:h-[88px] lg:w-[88px]"
             />
             <span className="leading-tight">
-              <span className="block font-serif text-base font-semibold tracking-tight text-ink sm:text-lg">
+              <span className="block font-serif text-base font-semibold tracking-tight text-ink md:text-[15px] lg:text-lg">
                 Onco-Info
               </span>
               <span className="block font-mono text-[10px] uppercase tracking-[0.16em] text-faint">
