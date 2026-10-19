@@ -21,6 +21,9 @@ export function Home() {
           O que o SUS fez no tratamento do câncer em três governos. Só fatos com
           fonte e data — e, quando falta dado, dizemos isso.
         </p>
+        <Link to="/comparar" className="btn-primary mt-6">
+          Começar a comparar
+        </Link>
       </section>
 
       <section className="doc-section">

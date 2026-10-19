@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { FactCard } from "../components/FactCard";
 import { PageHeader } from "../components/PageHeader";
 import { ProposalCard } from "../components/ProposalCard";
@@ -89,14 +88,6 @@ export function Elections2026() {
         <code className="font-mono text-[11px]">
           /docs/comparativo_propostas_saude_2026.pdf
         </code>
-        .
-      </p>
-
-      <p className="text-sm text-muted">
-        Quer ver só o que as propostas de Flávio Bolsonaro podem mudar?{" "}
-        <Link to="/flavio-2026" className="doclink">
-          Se Flávio for eleito
-        </Link>
         .
       </p>
     </div>

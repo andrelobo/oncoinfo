@@ -34,8 +34,8 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link className="tap text-muted hover:text-ink" to="/transparencia">
-                  Transparência
+                <Link className="tap text-muted hover:text-ink" to="/perguntas-frequentes">
+                  Dúvidas
                 </Link>
               </li>
               <li>
@@ -50,8 +50,8 @@ export function Footer() {
         <p className="mt-6 max-w-3xl border-t border-rule pt-4 text-sm text-muted">
           Site informativo e documental, com fonte e data em cada afirmação.
           Avisos de método em{" "}
-          <Link to="/transparencia" className="doclink">
-            Transparência
+          <Link to="/metodologia" className="doclink">
+            Metodologia
           </Link>
           .
         </p>
