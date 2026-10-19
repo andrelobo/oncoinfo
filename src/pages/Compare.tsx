@@ -17,7 +17,7 @@ export function Compare() {
       <PageHeader
         eyebrow="Comparação"
         title="Comparar períodos por eixo"
-        lead="A tabela resume, eixo por eixo, o que o material documenta em cada período. Uma célula vazia significa ausência de fonte específica, não ausência de ação de governo."
+        lead="O que o material documenta em cada período, eixo por eixo."
       />
       <div className="flex flex-wrap items-center gap-x-4 gap-y-2 border border-rule bg-canvas px-4 py-3">
         <span className="label">Legenda</span>

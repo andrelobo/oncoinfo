@@ -7,7 +7,7 @@ import { axes } from "../content/axes";
 import { facts } from "../content/facts";
 import { periodBySlug, periods } from "../content/periods";
 import { proposals2026 } from "../content/proposals2026";
-import { formatMonthYear, formatRange } from "../lib/format";
+import { formatRange } from "../lib/format";
 import { useSeo } from "../lib/seo";
 import type { PeriodSlug } from "../lib/types";
 
@@ -52,7 +52,7 @@ export function Government() {
       <PageHeader
         eyebrow="Período de governo"
         title={period.label}
-        lead={`Período de ${formatRange(period.start, period.end)}. Abaixo estão os registros documentados no material coletado, organizados por eixo.`}
+        lead={`O que foi feito entre ${formatRange(period.start, period.end)}, por tema.`}
       />
       {periodFacts.length === 0 ? (
         <p className="border border-rule bg-canvas px-4 py-3 font-mono text-[11px] uppercase tracking-[0.08em] text-faint">
@@ -104,11 +104,6 @@ export function Government() {
           </p>
         )}
       </section>
-
-      <p className="font-mono text-[11px] uppercase tracking-[0.08em] text-faint">
-        Última referência de data no material: 2022-09 (
-        {formatMonthYear("2022-09")}).
-      </p>
     </div>
   );
 }

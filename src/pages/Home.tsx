@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { AxisIcon } from "../components/AxisIcon";
 import { axes } from "../content/axes";
-import { facts } from "../content/facts";
 import { periods } from "../content/periods";
 import { useSeo } from "../lib/seo";
 
@@ -25,22 +24,18 @@ export function Home() {
       </section>
 
       <section className="doc-section">
-        <h2 className="label mb-3">Por período de governo</h2>
+        <h2 className="label mb-3">Compare por período</h2>
         <div className="divide-y divide-rule border-y border-rule">
           {periods.map((period) => (
             <Link
               key={period.slug}
               to={`/governo/${period.slug}`}
-              className="flex flex-wrap items-baseline gap-x-4 gap-y-1 py-3 no-underline"
+              className="flex items-baseline justify-between gap-4 py-3 no-underline"
             >
               <span className="font-serif text-base font-semibold text-ink">
                 {period.label}
               </span>
-              <span className="font-mono text-[11px] uppercase tracking-[0.08em] text-faint">
-                {facts.filter((fact) => fact.period === period.slug).length}{" "}
-                registro(s)
-              </span>
-              <span className="doclink ml-auto font-mono text-[11px] uppercase tracking-[0.08em]">
+              <span className="doclink font-mono text-[11px] uppercase tracking-[0.08em]">
                 Ver →
               </span>
             </Link>
@@ -49,7 +44,7 @@ export function Home() {
       </section>
 
       <section className="doc-section">
-        <h2 className="label mb-3">Comparar por eixo</h2>
+        <h2 className="label mb-3">Ou por tema</h2>
         <ul className="grid gap-px border border-rule bg-rule sm:grid-cols-2">
           {axes.map((axis) => (
             <li key={axis.slug} className="bg-paper">
@@ -76,16 +71,11 @@ export function Home() {
         </h2>
         <p className="mt-2 max-w-3xl text-sm text-muted">
           O que já foi feito (2003–2022) ao lado do que as campanhas prometem
-          para 2026. Promessa não é ato de governo.
+          para 2026.
         </p>
-        <div className="mt-4 flex flex-wrap gap-3">
-          <Link to="/eleicoes-2026" className="btn-primary">
-            Comparar propostas 2026
-          </Link>
-          <Link to="/flavio-2026" className="btn-ghost">
-            Se Flávio for eleito
-          </Link>
-        </div>
+        <Link to="/eleicoes-2026" className="btn-primary mt-4">
+          Ver propostas 2026
+        </Link>
       </section>
     </div>
   );

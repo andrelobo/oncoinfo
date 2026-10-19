@@ -13,27 +13,15 @@ export function About() {
       <PageHeader
         eyebrow="Institucional"
         title="Sobre"
-        lead="O “Onco-Info” é um site informativo e documental que reúne, com fonte e data, registros sobre políticas de oncologia em diferentes períodos de governo federal no Brasil."
+        lead="Um site que reúne, com fonte e data, o que foi feito no tratamento do câncer pelo SUS em diferentes governos."
       />
 
       <section className="doc-section">
-        <h2 className="label mb-2">O que o site é</h2>
+        <h2 className="label mb-2">O que você encontra</h2>
         <ul className="list-inside list-disc space-y-1 text-sm text-muted">
-          <li>Um comparativo documental, eixo por eixo, por período de governo.</li>
-          <li>Uma lista verificável de fontes datadas.</li>
-          <li>Um material que declara abertamente onde falta dado.</li>
-        </ul>
-      </section>
-
-      <section className="doc-section">
-        <h2 className="label mb-2">O que o site não é</h2>
-        <ul className="list-inside list-disc space-y-1 text-sm text-muted">
-          <li>Não é peça de campanha nem propaganda de partido.</li>
-          <li>Não é laudo técnico nem auditoria orçamentária.</li>
-          <li>
-            Não afirma que uma ação de governo causou determinado desfecho
-            individual.
-          </li>
+          <li>Comparação por período de governo e por tema.</li>
+          <li>Fontes datadas e verificáveis.</li>
+          <li>Onde falta dado, isso é dito com clareza.</li>
         </ul>
       </section>
 
