@@ -52,6 +52,19 @@ export function directionLabel(direction: string): string {
   }
 }
 
+export function directionExplain(direction: string): string {
+  switch (direction) {
+    case "expansao":
+      return "Criou ou ampliou algo (serviço, remédio, verba).";
+    case "restricao":
+      return "Reduziu, cortou ou desorganizou algo.";
+    case "estruturante":
+      return "Mudou a base ou a organização do sistema.";
+    default:
+      return "O material não deixa claro o efeito.";
+  }
+}
+
 export function sourceKindLabel(kind: string): string {
   switch (kind) {
     case "lei":

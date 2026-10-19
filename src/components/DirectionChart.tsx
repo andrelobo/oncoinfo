@@ -1,4 +1,4 @@
-import { directionLabel } from "../lib/format";
+import { directionExplain, directionLabel } from "../lib/format";
 import type { Direction, Fact, PeriodSlug } from "../lib/types";
 import { periods } from "../content/periods";
 
@@ -106,17 +106,21 @@ export function DirectionChart({
         ))}
       </div>
 
-      <div className="mt-4 flex flex-wrap gap-x-4 gap-y-1">
+      <div className="mt-4 grid gap-x-6 gap-y-2 sm:grid-cols-2">
         {ORDER.map((dir) => (
-          <span
-            key={dir}
-            className="inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-[0.1em] text-muted"
-          >
+          <span key={dir} className="flex items-start gap-2">
             <span
-              className="inline-block h-2.5 w-2.5"
+              className="mt-1 inline-block h-2.5 w-2.5 shrink-0"
               style={{ backgroundColor: COLORS[dir] }}
             />
-            {directionLabel(dir)}
+            <span>
+              <span className="font-mono text-[10px] font-medium uppercase tracking-[0.1em] text-muted">
+                {directionLabel(dir)}
+              </span>
+              <span className="block text-xs text-faint">
+                {directionExplain(dir)}
+              </span>
+            </span>
           </span>
         ))}
       </div>
