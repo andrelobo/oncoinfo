@@ -55,6 +55,47 @@ export function TabPage() {
               {p}
             </p>
           ))}
+          {section.compareRows ? (
+            <div className="overflow-hidden rounded-lg border border-rule">
+              <div className="hidden grid-cols-[8.5rem_1fr_1fr] border-b border-rule bg-canvas sm:grid">
+                <div className="px-4 py-2.5" />
+                {section.compareColumns?.map((col) => (
+                  <div
+                    key={col}
+                    className="border-l border-rule px-4 py-2.5 font-mono text-[11px] font-semibold uppercase tracking-[0.1em] text-brand-blue"
+                  >
+                    {col}
+                  </div>
+                ))}
+              </div>
+              {section.compareRows.map((row, i) => (
+                <div
+                  key={row.label}
+                  className={`grid grid-cols-1 sm:grid-cols-[8.5rem_1fr_1fr] ${
+                    i % 2 === 1 ? "bg-canvas/50" : "bg-white"
+                  } ${i > 0 ? "border-t border-rule" : ""}`}
+                >
+                  <div className="border-b border-rule/60 px-4 pt-3 font-serif text-sm font-bold text-ink sm:border-b-0 sm:py-3">
+                    {row.label}
+                  </div>
+                  {[
+                    [section.compareColumns?.[0], row.left],
+                    [section.compareColumns?.[1], row.right],
+                  ].map(([col, text], j) => (
+                    <div
+                      key={j}
+                      className="border-b border-rule/60 px-4 py-3 text-sm leading-relaxed text-muted last:border-b-0 sm:border-b-0 sm:border-l"
+                    >
+                      <span className="mb-1 block font-mono text-[10px] font-semibold uppercase tracking-[0.1em] text-brand-blue sm:hidden">
+                        {col}
+                      </span>
+                      {text}
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+          ) : null}
           {section.bullets ? (
             <ul className="list-inside list-disc space-y-2 text-sm leading-relaxed text-muted">
               {section.bullets.map((b) => (

@@ -7,6 +7,18 @@ export type DocSection = {
   heading: string;
   paragraphs?: string[];
   bullets?: string[];
+  /**
+   * Linhas de comparação com um rótulo em destaque (ex.: nome do estado) e
+   * duas colunas rotuladas (ex.: gestão Bolsonaro x gestão Lula).
+   */
+  compareRows?: CompareRow[];
+  compareColumns?: [string, string];
+};
+
+export type CompareRow = {
+  label: string;
+  left: string;
+  right: string;
 };
 
 export type DocClip = {
@@ -43,14 +55,43 @@ export const tabs: TabContent[] = [
     sections: [
       {
         heading: "Tabela Comparativa de Diretrizes Oncológicas na Região Norte",
-        paragraphs: [
-          "Amazonas (AM) — Gestão Jair Bolsonaro (2019–2022): Envio de verbas em bloco para o teto MAC estadual; metas digitais do Previne Brasil punindo municípios por falhas de conectividade no rastreio. Gestão Luiz Inácio Lula da Silva (2023–presente): Aporte no Super Centro de Diagnóstico da FCecon; fomento ao CEPCOLU (2025); auxílio-permanência de viagem e investimentos nas UBS Fluviais.",
-          "Pará (PA) — Bolsonaro: Financiamento descentralizado via emendas para manutenção de leitos de quimioterapia ambulatorial na capital. Lula: Financiamento e implantação da primeira estrutura de cirurgia robótica oncológica 100% SUS da Amazônia.",
-          "Rondônia (RO) — Bolsonaro: Repasses financeiros federais ordinários da União para os hospitais filantrópicos de tratamento do câncer. Lula: Integração do polo oncológico à Rede de Telecirurgia Robótica nacional do SUS para conexões de alta complexidade.",
-          "Acre (AC) — Bolsonaro: Manutenção do modelo tradicional de Tratamento Fora de Domicílio (TFD) com custeio via repasse ministerial regular. Lula: Atualização do teto de repasses oncológicos para o fornecimento de 23 novos medicamentos quimioterápicos de alto custo.",
-          "Amapá (AP) — Bolsonaro: Envio de repasses do Fundo Nacional de Saúde para a contratação terceirizada de serviços de oncologia clínica temporários. Lula: Instalação e atualização tecnológica de maquinários públicos de radioterapia por meio de investimentos do Novo PAC Saúde.",
-          "Tocantins (TO) — Bolsonaro: Monitoramento de indicadores de rastreio de câncer por meio do preenchimento de prontuários eletrônicos municipais. Lula: Ampliação do orçamento para serviços especializados integrados ao SUS, descentralizando o tratamento para o interior.",
-          "Roraima (RR) — Bolsonaro: Execução do orçamento de oncologia sob demanda das secretarias locais, focado na quimioterapia ambulatorial. Lula: Repasses vinculados à nova política de Atenção Primária, focada nas barreiras de acesso geográfico e busca ativa.",
+        compareColumns: ["Bolsonaro (2019–2022)", "Lula (2023–presente)"],
+        compareRows: [
+          {
+            label: "Amazonas (AM)",
+            left: "Envio de verbas em bloco para o teto MAC estadual; metas digitais do Previne Brasil punindo municípios por falhas de conectividade no rastreio.",
+            right: "Aporte no Super Centro de Diagnóstico da FCecon; fomento ao CEPCOLU (2025); auxílio-permanência de viagem e investimentos nas UBS Fluviais.",
+          },
+          {
+            label: "Pará (PA)",
+            left: "Financiamento descentralizado via emendas para manutenção de leitos de quimioterapia ambulatorial na capital.",
+            right: "Financiamento e implantação da primeira estrutura de cirurgia robótica oncológica 100% SUS da Amazônia.",
+          },
+          {
+            label: "Rondônia (RO)",
+            left: "Repasses financeiros federais ordinários da União para os hospitais filantrópicos de tratamento do câncer.",
+            right: "Integração do polo oncológico à Rede de Telecirurgia Robótica nacional do SUS para conexões de alta complexidade.",
+          },
+          {
+            label: "Acre (AC)",
+            left: "Manutenção do modelo tradicional de Tratamento Fora de Domicílio (TFD) com custeio via repasse ministerial regular.",
+            right: "Atualização do teto de repasses oncológicos para o fornecimento de 23 novos medicamentos quimioterápicos de alto custo.",
+          },
+          {
+            label: "Amapá (AP)",
+            left: "Envio de repasses do Fundo Nacional de Saúde para a contratação terceirizada de serviços de oncologia clínica temporários.",
+            right: "Instalação e atualização tecnológica de maquinários públicos de radioterapia por meio de investimentos do Novo PAC Saúde.",
+          },
+          {
+            label: "Tocantins (TO)",
+            left: "Monitoramento de indicadores de rastreio de câncer por meio do preenchimento de prontuários eletrônicos municipais.",
+            right: "Ampliação do orçamento para serviços especializados integrados ao SUS, descentralizando o tratamento para o interior.",
+          },
+          {
+            label: "Roraima (RR)",
+            left: "Execução do orçamento de oncologia sob demanda das secretarias locais, focado na quimioterapia ambulatorial.",
+            right: "Repasses vinculados à nova política de Atenção Primária, focada nas barreiras de acesso geográfico e busca ativa.",
+          },
         ],
       },
       {
