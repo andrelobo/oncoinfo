@@ -30,12 +30,17 @@ export function Footer() {
           </nav>
         </div>
 
+
+
         <div className="mt-6 rounded-lg border border-rule bg-canvas px-4 py-3">
-          <p className="label mb-1">Iniciativa independente</p>
           <p className="max-w-3xl text-sm leading-relaxed text-muted">
-            Este site é uma iniciativa independente e voluntária. Não pertence à
-            campanha de Lula, ao Partido dos Trabalhadores nem à coligação, e
-            não tem vínculo com nenhum deles.
+            Este site é uma iniciativa independente e voluntária, idealizada por uma paciente oncológica preocupada com a própria vida, seu futuro e a saúde de muitos amazonenses e nortistas.
+          </p>
+          <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted">
+            Não possui vínculo com candidatos à Presidência, ao Governo do Estado ou com partidos políticos.
+          </p>
+          <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted">
+            Fontes: pesquisas realizadas no Google sobre oncologia e saúde.
           </p>
         </div>
 
