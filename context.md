@@ -9,7 +9,7 @@ O site é uma **iniciativa independente e voluntária**, sem vínculo com campan
 ## Estado atual
 
 - build de produção executado com sucesso nesta estação de trabalho; `npm run build`, `npm run lint` aprovados;
-- último commit pushado é **`eb059bd`** ("feat(footer): bloco de iniciativa independente/apartidaria com o texto da Erica");
+- último commit pushado é **`2e96e55`** ("feat(footer): atualiza texto de iniciativa e fontes");
 - repositório Git na branch `main`, remoto `origin` = `https://github.com/andrelobo/oncoinfo.git`;
 - deploy automático na Vercel acionado por push na branch `main` do GitHub;
 - site estruturado em **7 abas** (pílulas no topo), com rota `/:slug` renderizada por `src/pages/TabPage.tsx`;
