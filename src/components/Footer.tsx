@@ -30,6 +30,15 @@ export function Footer() {
           </nav>
         </div>
 
+        <div className="mt-6 rounded-lg border border-rule bg-canvas px-4 py-3">
+          <p className="label mb-1">Iniciativa independente</p>
+          <p className="max-w-3xl text-sm leading-relaxed text-muted">
+            Este site é uma iniciativa independente e voluntária. Não pertence à
+            campanha de Lula, ao Partido dos Trabalhadores nem à coligação, e
+            não tem vínculo com nenhum deles.
+          </p>
+        </div>
+
         <p className="mt-6 max-w-3xl border-t border-rule pt-4 text-sm text-muted">
           Site informativo e documental. O conteúdo de cada aba reproduz o
           material original, com link para o documento em PDF.
