@@ -11,9 +11,7 @@ export default function App() {
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Navigate to={`/${first}`} replace />} />
-          {tabs.map((tab) => (
-            <Route key={tab.slug} path={`/${tab.slug}`} element={<TabPage />} />
-          ))}
+          <Route path="/:slug" element={<TabPage />} />
           <Route path="*" element={<Navigate to={`/${first}`} replace />} />
         </Route>
       </Routes>
