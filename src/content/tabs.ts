@@ -238,7 +238,7 @@ export const tabs: TabContent[] = [
     sections: [
       {
         heading: "1. O que foi feito no governo Bolsonaro",
-        paragraphs: [
+        bullets: [
           "Corte de verbas para o câncer (Orçamento 2023): Em setembro de 2022, o governo reduziu em 45% os recursos destinados a ações de prevenção e controle do câncer no projeto de orçamento de 2023. A verba caiu de R$ 175 milhões para R$ 97 milhões. O remanejamento de recursos visava abrir espaço fiscal para as emendas de relator (comumente chamadas de 'orçamento secreto'). Entidades médicas e sociais, como a Abrale, apontaram riscos diretos na compra de equipamentos, insumos e reformas de hospitais.",
           "Veto ao Projeto de Lei dos medicamentos orais (2021): Em julho de 2021, foi vetado integralmente o Projeto de Lei 6.330/2019. O texto determinava a obrigatoriedade de planos de saúde cobrirem despesas com tratamentos antineoplásicos de uso domiciliar e oral em até 48 horas após prescrição. O Executivo justificou que a medida comprometeria a sustentabilidade financeira do mercado de saúde suplementar e que o prazo imposto inviabilizaria análises técnicas adequadas da ANS.",
           "Sanção e vetos no Estatuto da Pessoa com Câncer (2021): Em novembro de 2021, o governo sancionou a Lei 14.238 que criou o estatuto protetivo. No entanto, houve veto ao artigo considerado principal por especialistas, que obrigava o Estado a garantir o acesso universal a medicamentos mais modernos e efetivos já incorporados pelo SUS. A justificativa governamental se baseou no argumento de que a regra entraria em conflito com os processos estabelecidos de avaliação de tecnologias em saúde.",

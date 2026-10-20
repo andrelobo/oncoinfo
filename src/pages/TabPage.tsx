@@ -97,10 +97,30 @@ export function TabPage() {
             </div>
           ) : null}
           {section.bullets ? (
-            <ul className="list-inside list-disc space-y-2 text-sm leading-relaxed text-muted">
-              {section.bullets.map((b) => (
-                <li key={b}>{b}</li>
-              ))}
+            <ul className="space-y-2.5 text-sm leading-relaxed text-muted">
+              {section.bullets.map((b) => {
+                const sep = b.indexOf(": ");
+                const lead = sep > 0 && sep < 90 ? b.slice(0, sep) : null;
+                const body = lead ? b.slice(sep + 2) : b;
+                return (
+                  <li key={b} className="relative pl-5">
+                    <span
+                      aria-hidden
+                      className="absolute left-0 top-[0.6em] h-1.5 w-1.5 rounded-full bg-brand-blue"
+                    />
+                    {lead ? (
+                      <>
+                        <strong className="font-semibold text-ink">
+                          {lead}:
+                        </strong>{" "}
+                        {body}
+                      </>
+                    ) : (
+                      b
+                    )}
+                  </li>
+                );
+              })}
             </ul>
           ) : null}
         </section>
