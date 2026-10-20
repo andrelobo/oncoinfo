@@ -1,46 +1,20 @@
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { Layout } from "./components/Layout";
-import { About } from "./pages/About";
-import { Compare } from "./pages/Compare";
-import { CompareAxis } from "./pages/CompareAxis";
-import { Elections2026 } from "./pages/Elections2026";
-import { Faq } from "./pages/Faq";
-import { Government } from "./pages/Government";
-import { Home } from "./pages/Home";
-import { Methodology } from "./pages/Methodology";
-import { RealImpact } from "./pages/RealImpact";
-import { Sources } from "./pages/Sources";
-import { State } from "./pages/State";
-import { States } from "./pages/States";
-import { Timeline } from "./pages/Timeline";
+import { TabPage } from "./pages/TabPage";
+import { tabs } from "./content/tabs";
 
 export default function App() {
+  const first = tabs[0].slug;
+
   return (
     <BrowserRouter>
       <Routes>
         <Route element={<Layout />}>
-          <Route path="/" element={<Home />} />
-          <Route path="/comparar" element={<Compare />} />
-          <Route path="/comparar/:axis" element={<CompareAxis />} />
-          <Route path="/governo/:slug" element={<Government />} />
-          <Route path="/linha-do-tempo" element={<Timeline />} />
-          <Route path="/impacto-real" element={<RealImpact />} />
-          <Route path="/eleicoes-2026" element={<Elections2026 />} />
-          <Route
-            path="/flavio-2026"
-            element={<Navigate to="/eleicoes-2026" replace />}
-          />
-          <Route path="/estados" element={<States />} />
-          <Route path="/estados/:slug" element={<State />} />
-          <Route path="/metodologia" element={<Methodology />} />
-          <Route path="/fontes" element={<Sources />} />
-          <Route path="/perguntas-frequentes" element={<Faq />} />
-          <Route
-            path="/transparencia"
-            element={<Navigate to="/metodologia" replace />}
-          />
-          <Route path="/sobre" element={<About />} />
-          <Route path="*" element={<Home />} />
+          <Route path="/" element={<Navigate to={`/${first}`} replace />} />
+          {tabs.map((tab) => (
+            <Route key={tab.slug} path={`/${tab.slug}`} element={<TabPage />} />
+          ))}
+          <Route path="*" element={<Navigate to={`/${first}`} replace />} />
         </Route>
       </Routes>
     </BrowserRouter>
