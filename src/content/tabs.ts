@@ -149,8 +149,6 @@ export const tabs: TabContent[] = [
         ],
       },
     ],
-    footnote:
-      "Resumo: o CECON ganhou tamanho e especialização nos anos 1990; ganhou rapidez no diagnóstico em 2013; e ganhou humanização, estrutura moderna e foco na saúde da mulher agora, em 2025/2026.",
   },
   {
     slug: "lula-1",
