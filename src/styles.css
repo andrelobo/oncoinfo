@@ -69,9 +69,9 @@
 }
 
 @layer components {
-  /* Bloco de documento: reto, hairline, sem sombra */
+  /* Bloco de documento: card com hairline, cantos e sombra sutil */
   .doc {
-    @apply border border-rule bg-paper;
+    @apply rounded-xl border border-rule bg-paper shadow-sm;
   }
 
   .doc-section {
@@ -80,7 +80,7 @@
 
   /* Rótulo técnico: mono, versalete, espaçado */
   .label {
-    @apply font-mono text-[11px] font-medium uppercase tracking-[0.14em] text-faint;
+    @apply font-mono text-[11px] font-medium uppercase tracking-[0.14em] text-brand-blue;
   }
 
   /* Numeração/kicker de seção */
@@ -95,6 +95,11 @@
   /* Link que parece link de documento (azul, sublinhado discreto) */
   .doclink {
     @apply text-link underline decoration-rule-strong underline-offset-2 hover:decoration-current;
+  }
+
+  /* Botão de ação sólido (ex.: abrir PDF) */
+  .btn-solid {
+    @apply inline-flex items-center gap-2 rounded-lg bg-brand-blue px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-brand-blue/90;
   }
 
   .btn-primary {

@@ -21,7 +21,7 @@ export function PageHeader({
           {meta}
         </p>
       ) : null}
-      <div className="mt-6 border-t border-rule" />
+      <div className="mt-6 border-t-2 border-brand-blue" />
     </header>
   );
 }

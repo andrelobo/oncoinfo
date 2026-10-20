@@ -3,7 +3,7 @@ import { tabs } from "../content/tabs";
 
 export function Footer() {
   return (
-    <footer className="border-t border-rule bg-paper">
+    <footer className="border-t-2 border-brand-blue bg-paper">
       <div className="mx-auto max-w-5xl px-4 py-8">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
           <div className="flex items-start gap-3">

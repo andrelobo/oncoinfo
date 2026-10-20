@@ -115,15 +115,18 @@ export function TabPage() {
             {tab.clips.map((clip) => (
               <article
                 key={clip.title}
-                className="border-l-2 border-brand-blue bg-canvas px-4 py-3"
+                className="overflow-hidden rounded-lg border border-rule bg-paper shadow-sm"
               >
-                <p className="label mb-1">{clip.source}</p>
-                <h3 className="font-serif text-base font-semibold text-ink">
-                  “{clip.title}”
-                </h3>
-                <p className="mt-1 text-sm leading-relaxed text-muted">
-                  {clip.text}
-                </p>
+                <div className="h-1 bg-brand-blue" />
+                <div className="px-4 py-3">
+                  <p className="label mb-1">{clip.source}</p>
+                  <h3 className="font-serif text-base font-semibold text-ink">
+                    “{clip.title}”
+                  </h3>
+                  <p className="mt-1 text-sm leading-relaxed text-muted">
+                    {clip.text}
+                  </p>
+                </div>
               </article>
             ))}
           </div>
@@ -137,12 +140,12 @@ export function TabPage() {
       ) : null}
 
       {tab.pdf ? (
-        <p className="text-sm">
+        <p>
           <a
             href={tab.pdf}
             target="_blank"
             rel="noopener noreferrer"
-            className="doclink"
+            className="btn-solid"
           >
             Abrir o documento original (PDF)
           </a>
