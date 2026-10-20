@@ -3,6 +3,19 @@ import { PageHeader } from "../components/PageHeader";
 import { tabs, tabBySlug } from "../content/tabs";
 import { useSeo } from "../lib/seo";
 
+function EmphasizedParagraph({ text, labels }: { text: string; labels?: string[] }) {
+  const label = labels?.find((l) => text.startsWith(l));
+  if (!label) {
+    return <p className="mb-3 text-sm leading-relaxed text-muted">{text}</p>;
+  }
+  return (
+    <p className="mb-3 text-sm leading-relaxed text-muted">
+      <strong className="font-semibold text-ink">{label}</strong>{" "}
+      {text.slice(label.length).trimStart()}
+    </p>
+  );
+}
+
 export function TabPage() {
   const { slug = "" } = useParams();
   const tab = tabBySlug[slug];
@@ -51,9 +64,11 @@ export function TabPage() {
             {section.heading}
           </h2>
           {section.paragraphs?.map((p) => (
-            <p key={p} className="mb-3 text-sm leading-relaxed text-muted">
-              {p}
-            </p>
+            <EmphasizedParagraph
+              key={p}
+              text={p}
+              labels={section.emphasizeLabels}
+            />
           ))}
           {section.compareRows ? (
             <div className="overflow-hidden rounded-lg border border-rule">

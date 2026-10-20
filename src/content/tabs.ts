@@ -8,6 +8,11 @@ export type DocSection = {
   paragraphs?: string[];
   bullets?: string[];
   /**
+   * Rótulos que devem aparecer em negrito no início de cada parágrafo
+   * (ex.: "O que o plano propõe:").
+   */
+  emphasizeLabels?: string[];
+  /**
    * Linhas de comparação com um rótulo em destaque (ex.: nome do estado) e
    * duas colunas rotuladas (ex.: gestão Bolsonaro x gestão Lula).
    */
@@ -125,6 +130,7 @@ export const tabs: TabContent[] = [
     sections: [
       {
         heading: "1. A Era Pós-Criação do SUS e a Transformação em Fundação (Anos 1990)",
+        emphasizeLabels: ["O impacto:"],
         paragraphs: [
           "Até o final dos anos 1980, o CECON (criado originalmente em 1974) era um centro hospitalar pequeno com muita dificuldade para conseguir verba. O grande salto estrutural aconteceu a partir de 1989/1990 (no governo de Vivaldo Frota), logo após o nascimento do SUS, quando a unidade foi transformada oficialmente em Fundação Pública.",
           "O impacto: Com a criação do SUS e o recebimento de verbas federais carimbadas, a FCECON conseguiu expandir seu espaço físico e, pela primeira vez, passou a oferecer tratamentos de alta complexidade (grandes cirurgias e tratamentos pesados contra o câncer) de forma organizada e gratuita.",
@@ -132,6 +138,7 @@ export const tabs: TabContent[] = [
       },
       {
         heading: "2. A Virada Tecnológica e Digital (2013)",
+        emphasizeLabels: ["O impacto:"],
         paragraphs: [
           "Em 2013 (no governo de Omar Aziz), o hospital passou por uma modernização silenciosa, mas que mudou a vida dos pacientes: o início da digitalização do parque de imagens.",
           "O impacto: Antes, os exames de imagem demoravam muito para serem revelados em chapas físicas. Com a digitalização, os médicos passaram a ver os exames no computador em tempo real. Isso reduziu o tempo de espera pelo diagnóstico do câncer e evitou que os pacientes ficassem repetindo exames e tomando radiação desnecessária.",
@@ -331,6 +338,7 @@ export const tabs: TabContent[] = [
     sections: [
       {
         heading: "Flávio Bolsonaro — 'SUS Padrão Einstein'",
+      emphasizeLabels: ["O que o plano propõe:", "O que dizem os especialistas e como afeta a sua vida:"],
         paragraphs: [
           "O que o plano propõe: Levar o modelo de gestão do hospital privado de luxo para o SUS. Pagar clínicas particulares que tenham salas e equipamentos vazios para fazer as consultas e cirurgias de quem está esperando na fila do SUS.",
           "O que dizem os especialistas e como afeta a sua vida: A proposta tenta agilizar o atendimento de curto prazo usando estruturas que já existem. Porém, especialistas da ABRASCO alertam que usar o dinheiro público no setor privado drena recursos que deveriam reformar os hospitais do próprio SUS. Se a parceria acabar no futuro, a população corre o risco de ficar desamparada porque a rede pública não foi fortalecida. Além disso, seu plano não prevê construir novos hospitais públicos para tratamento de câncer, focando apenas em exames rápidos.",
@@ -338,6 +346,7 @@ export const tabs: TabContent[] = [
       },
       {
         heading: "Flávio Bolsonaro — Corte de R$ 250 bilhões ('Tesouraço')",
+      emphasizeLabels: ["O que o plano propõe:", "O que dizem os especialistas e como afeta a sua vida:"],
         paragraphs: [
           "O que o plano propõe: Diminuir o tamanho da máquina pública e cortar despesas do governo para equilibrar as contas do país.",
           "O que dizem os especialistas e como afeta a sua vida: Economistas alertam que é impossível cortar um valor tão alto sem mexer nos serviços sociais. A campanha estuda mudar as leis que garantem repasses obrigatórios mínimos para a saúde pública. Se os pisos constitucionais forem retirados, o SUS corre o risco real de perder verba estrutural básica, afetando o atendimento geral.",
@@ -345,6 +354,7 @@ export const tabs: TabContent[] = [
       },
       {
         heading: "Flávio Bolsonaro — Prontuário Único por CPF",
+      emphasizeLabels: ["O que o plano propõe:", "O que dizem os especialistas e como afeta a sua vida:"],
         paragraphs: [
           "O que o plano propõe: Unificar o histórico médico de cada cidadão para que postos e hospitais públicos ou privados vejam seus exames antigos usando apenas o CPF.",
           "O que dizem os especialistas e como afeta a sua vida: Facilitaria o atendimento e evitaria exames repetidos. Contudo, especialistas em saúde digital esclarecem que essa proposta é redundante: o SUS já tem essa tecnologia em andamento através do ConecteSUS, tornando a medida uma continuação do que já é feito, e não uma inovação criada do zero.",
@@ -352,6 +362,7 @@ export const tabs: TabContent[] = [
       },
       {
         heading: "Lula — Mais Médicos",
+      emphasizeLabels: ["O que o plano propõe:", "O que dizem os especialistas e como afeta a sua vida:"],
         paragraphs: [
           "O que o plano propõe: Continuar expandindo o programa de contratação de médicos para atuar nos postos de saúde da família.",
           "O que dizem os especialistas e como afeta a sua vida: Estudos da OPAS e da OMS provam que o programa melhorou o atendimento básico, levando médicos fixos a locais isolados e periferias, reduzindo internações de emergência por pressão alta ou diabetes. Mas auditorias revelam que ele cria um 'efeito funil': o médico descobre a doença no posto, mas o paciente fica travado nas grandes filas para conseguir um cirurgião ou especialista.",
@@ -359,6 +370,7 @@ export const tabs: TabContent[] = [
       },
       {
         heading: "Lula — 'Agora Tem Especialistas'",
+      emphasizeLabels: ["O que o plano propõe:", "O que dizem os especialistas e como afeta a sua vida:"],
         paragraphs: [
           "O que o plano propõe: Programa recente criado para contratar médicos especialistas, abrir postos em turnos noturnos e fazer mutirões de cirurgias.",
           "O que dizem os especialistas e como afeta a sua vida: É a aposta atual para tentar diminuir as enormes filas de espera que o Mais Médicos não resolve. Por ser um programa muito recente, os resultados ainda estão aparecendo aos poucos nas regiões. Especialistas explicam que o fim definitivo das filas nacionais vai depender de o governo garantir verbas firmes e regulares nos próximos anos.",
@@ -366,6 +378,7 @@ export const tabs: TabContent[] = [
       },
       {
         heading: "Lula — Radioterapia e Câncer em 30 Dias",
+      emphasizeLabels: ["O que o plano propõe:", "O que dizem os especialistas e como afeta a sua vida:"],
         paragraphs: [
           "O que o plano propõe: Promete que o paciente começará a tratar o câncer em até um mês, usando o Novo PAC da Saúde e novas tecnologias para acelerar o diagnóstico.",
           "O que dizem os especialistas e como afeta a sua vida: O investimento em tratamento do câncer é real. O governo investiu mais de R$ 160 milhões e entregou novos aparelhos modernos de radioterapia pelo país, alcançando o marco de ter ao menos um centro de radioterapia em cada estado brasileiro. Isso evita que pacientes de estados menores viajem milhares de quilômetros para se tratar. No entanto, médicos alertam que a promessa de tratar em 30 dias é difícil de cumprir em todo o país, pois o deficit histórico de leitos cirúrgicos e aparelhos ainda demanda anos de investimentos pesados.",
@@ -373,7 +386,7 @@ export const tabs: TabContent[] = [
       },
     ],
     footnote:
-      "This is for informational purposes only. For medical advice or diagnosis, consult a professional. AI responses may include mistakes.",
+      "Conteúdo apenas informativo. Para orientação ou diagnóstico médico, procure um profissional. Respostas geradas por IA podem conter erros.",
   },
 ];
 
