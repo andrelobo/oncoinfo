@@ -232,11 +232,42 @@ export const tabs: TabContent[] = [
   {
     slug: "lula-2",
     label: "Lula II",
-    title: "Governo Lula II (2023–presente)",
-    subtitle: "Conteúdo em preparação",
-    pdf: "",
-    pending: true,
-    sections: [],
+    title: "Balanço Histórico: Oncologia no SUS (Governo Lula 2003–2010)",
+    subtitle:
+      "Relatório de Diretrizes Estruturais e Consolidação de Rede Pública de Alta Complexidade",
+    pdf: "/docs/balanco_oncologia_lula_historico.pdf",
+    sections: [
+      {
+        heading: "1. Listagem de feitos e estruturação da rede nacional",
+        bullets: [
+          "Política Nacional de Atenção Oncológica (PNAO - 2005): Instituída pela Portaria nº 2.439/2005, marcou a primeira política de Estado unificada para o câncer no Brasil. Organizou o atendimento do SUS em redes estaduais e regionais, integrando ações que vão desde a prevenção na atenção básica até os procedimentos de altíssima complexidade.",
+          "Estruturação dos CACONs e UNACONs: Regulamentou e credenciou hospitais públicos em Centros (CACON) e Unidades (UNACON) de Assistência de Alta Complexidade em Oncologia. A medida organizou repasses financeiros federais diretos e vinculados para instituições que oferecessem tratamento cirúrgico, quimioterápico e radioterápico de forma integrada.",
+          "Expansão do Programa Viva Mulher: Fortalecimento do rastreamento nacional do câncer de colo de útero e de mama sob coordenação técnica do INCA. O programa ampliou significativamente o acesso a exames preventivos (Papanicolau) e mamografias, priorizando a interiorização do diagnóstico de lesões precursoras.",
+          "Bases das Parcerias para o Desenvolvimento Produtivo (PDPs): Formulação dos primeiros acordos de transferência tecnológica entre laboratórios públicos nacionais e indústrias farmacêuticas globais. O objetivo foi pavimentar a fabricação nacional de medicamentos oncológicos e biológicos, reduzindo custos de importação.",
+          "Reajuste das APACs de Quimioterapia: Revisão e reajuste nos tetos de reembolso das Autorizações de Procedimentos de Alta Complexidade (APAC) na tabela do SUS. Isso viabilizou financeiramente que hospitais filantrópicos e universitários adotassem esquemas terapêuticos modernos combinados.",
+        ],
+      },
+    ],
+    clips: [
+      {
+        source: "Ministério da Saúde — Dezembro de 2005",
+        title:
+          "Governo Federal institui política inédita para unificar tratamento de câncer no SUS",
+        text: "O Ministério da Saúde assina a portaria que cria a Política Nacional de Atenção Oncológica. O objetivo é criar redes regionalizadas em todos os estados, garantindo que o paciente do interior tenha acesso rápido a exames e cirurgias sem precisar se deslocar para os grandes centros de forma desordenada.",
+      },
+      {
+        source: "Folha de S.Paulo — Março de 2006",
+        title:
+          "SUS credencia novos hospitais contra o câncer para reduzir filas no país",
+        text: "Com as novas regras federais, o Ministério da Saúde expande o número de Unidades de Assistência de Alta Complexidade em Oncologia (UNACONs). A medida descentraliza o atendimento de quimioterapia e radioterapia, fortalecendo hospitais regionais de médio e grande porte.",
+      },
+      {
+        source: "O Globo — Outubro de 2008",
+        title:
+          "Campanhas de mamografia batem recorde de atendimento no SUS com foco no diagnóstico precoce",
+        text: "Dados do Ministério da Saúde apontam expansão na realização de exames preventivos para mulheres na faixa prioritária. Parcerias estruturam unidades móveis para levar exames de colo de útero e de mama a municípios e comunidades isoladas.",
+      },
+    ],
   },
   {
     slug: "propostas-2026",
