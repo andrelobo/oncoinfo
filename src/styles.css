@@ -15,10 +15,10 @@
   --color-rule-strong: #cdd1d8;
 
   /* Cor como sinal, com a paleta do logo (azul-marinho + preto) */
-  --color-brand-blue: #003078;
+  --color-brand-blue: #003090;
   --color-brand-ink: #0a0a0a;
-  --color-link: #003078;
-  --color-accent: #0050a0;
+  --color-link: #003090;
+  --color-accent: #003090;
 
   --color-dir-expansao: #03955b;
   --color-dir-restricao: #a3182e;

@@ -8,7 +8,7 @@ export function Footer() {
         <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
           <div className="flex items-start gap-3">
             <img
-              src="/logo-banner.jpg"
+              src="/logo.png"
               alt="Onco-Info"
               className="h-12 w-auto shrink-0 object-contain"
             />

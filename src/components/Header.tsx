@@ -7,9 +7,9 @@ export function Header() {
       <div className="mx-auto max-w-5xl px-4 py-3">
         <Link to="/onco-norte" className="tap block">
           <img
-            src="/logo-banner.jpg"
+            src="/logo.png"
             alt="Onco-Info — Informação salva vidas"
-            className="mx-auto h-16 w-auto object-contain sm:h-20"
+            className="mx-auto h-14 w-auto object-contain sm:h-16"
           />
         </Link>
       </div>
