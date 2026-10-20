@@ -232,40 +232,55 @@ export const tabs: TabContent[] = [
   {
     slug: "lula-2",
     label: "Lula II",
-    title: "Balanço Histórico: Oncologia no SUS (Governo Lula 2003–2010)",
+    title: "Balanço de Ações e Investimentos na Oncologia do SUS",
     subtitle:
-      "Relatório de Diretrizes Estruturais e Consolidação de Rede Pública de Alta Complexidade",
-    pdf: "/docs/balanco_oncologia_lula_historico.pdf",
+      "Governo Federal (Gestão 2023–2026) · Relatório Consolidado de Infraestrutura e Avanços Legais",
+    pdf: "/docs/lula_2.pdf",
     sections: [
       {
-        heading: "1. Listagem de feitos e estruturação da rede nacional",
+        heading: "1. Listagem de feitos pela oncologia (2023 a 2026)",
         bullets: [
-          "Política Nacional de Atenção Oncológica (PNAO - 2005): Instituída pela Portaria nº 2.439/2005, marcou a primeira política de Estado unificada para o câncer no Brasil. Organizou o atendimento do SUS em redes estaduais e regionais, integrando ações que vão desde a prevenção na atenção básica até os procedimentos de altíssima complexidade.",
-          "Estruturação dos CACONs e UNACONs: Regulamentou e credenciou hospitais públicos em Centros (CACON) e Unidades (UNACON) de Assistência de Alta Complexidade em Oncologia. A medida organizou repasses financeiros federais diretos e vinculados para instituições que oferecessem tratamento cirúrgico, quimioterápico e radioterápico de forma integrada.",
-          "Expansão do Programa Viva Mulher: Fortalecimento do rastreamento nacional do câncer de colo de útero e de mama sob coordenação técnica do INCA. O programa ampliou significativamente o acesso a exames preventivos (Papanicolau) e mamografias, priorizando a interiorização do diagnóstico de lesões precursoras.",
-          "Bases das Parcerias para o Desenvolvimento Produtivo (PDPs): Formulação dos primeiros acordos de transferência tecnológica entre laboratórios públicos nacionais e indústrias farmacêuticas globais. O objetivo foi pavimentar a fabricação nacional de medicamentos oncológicos e biológicos, reduzindo custos de importação.",
-          "Reajuste das APACs de Quimioterapia: Revisão e reajuste nos tetos de reembolso das Autorizações de Procedimentos de Alta Complexidade (APAC) na tabela do SUS. Isso viabilizou financeiramente que hospitais filantrópicos e universitários adotassem esquemas terapêuticos modernos combinados.",
+          "Investimento Histórico de R$ 2,2 Bilhões (Maio de 2026): Destinação de recursos federais específicos para reformular a tabela de financiamento do SUS. O montante viabilizou a oferta de 23 novos medicamentos oncológicos de alto custo cobrindo 18 tipos de câncer (beneficiando mais de 112 mil pacientes) e, de forma inédita, passou a cobrir financeiramente cirurgias robóticas oncológicas pela rede pública.",
+          "Lei das Terapias Avançadas e Vacinas (Lei 15.385/2026): Sancionada sem vetos em abril de 2026, a nova legislação incluiu vacinas contra o câncer e produtos de terapia avançada como prioridades absolutas de pesquisa, desenvolvimento e gratuidade dentro do SUS.",
+          "Adoção Legal da Imunoterapia (Lei 15.379/2026): Sancionada em abril de 2026, essa lei obriga a inclusão de imunoterapias nos protocolos do SUS sempre que demonstrarem superioridade ou maior segurança comparadas aos tratamentos tradicionais, expandindo medicamentos antes restritos à rede privada.",
+          "Fim do Vazio Radioterápico em Roraima (Outubro de 2026): Com aporte de R$ 17 milhões, o Ministério da Saúde inaugurou o primeiro Centro de Radioterapia de Roraima no Hospital Geral (HGR), instalando um acelerador linear próprio e zerando o deslocamento interestadual de mais de 500 pacientes ao ano.",
+          "Instituição da Nova Política Nacional do Câncer (2023–2024): Publicação da Lei 14.758/2023, que criou as diretrizes de cuidado integral e o Programa Nacional de Navegação da Pessoa com Diagnóstico de Câncer, estruturado para guiar e acompanhar individualmente o paciente desde a suspeita até o tratamento.",
+          "Assistência Farmacêutica em Oncologia (AF-Onco): Implementada no segundo semestre de 2026, mudou a lógica do SUS: o Ministério da Saúde passou a realizar compras centralizadas diretamente com a indústria farmacêutica internacional de grande porte, aumentando o poder de barganha e garantindo o abastecimento em massa.",
+          "Segunda Fase do Plano de Expansão da Radioterapia (Novo PAC): Destinação de mais de R$ 605 milhões via Novo PAC Saúde para a substituição de 56 aceleradores lineares obsoletos em todo o país e finalização de obras de infraestrutura regional.",
+          "Inauguração de Grandes Centros de Referência: Entrega do Centro de Oncologia e Hematologia do Grupo Hospitalar Conceição (RS), com investimento de R$ 144 milhões em 2024, e ampliação de leitos oncológicos e novos equipamentos de radiação em Minas Gerais (como no Hospital Luxemburgo).",
+          "Aceleração de Diagnósticos no Amazonas e CEPCOLU: Implementação do Super Centro Brasil para Diagnóstico de Câncer em Manaus integrado à Fundação Cecon (FCecon), encurtando o tempo para laudos de biópsia de 30 para apenas 8 dias. Além disso, o Cepcolu elevou a capacidade para 3.000 cirurgias preventivas de colo de útero ao ano.",
         ],
       },
     ],
     clips: [
       {
-        source: "Ministério da Saúde — Dezembro de 2005",
-        title:
-          "Governo Federal institui política inédita para unificar tratamento de câncer no SUS",
-        text: "O Ministério da Saúde assina a portaria que cria a Política Nacional de Atenção Oncológica. O objetivo é criar redes regionalizadas em todos os estados, garantindo que o paciente do interior tenha acesso rápido a exames e cirurgias sem precisar se deslocar para os grandes centros de forma desordenada.",
+        source: "GOV.BR — Maio de 2026",
+        title: "SUS oferece 23 novos medicamentos para o tratamento do câncer",
+        text: "Ministério da Saúde anuncia o maior pacote de financiamento da história da oncologia pública. Com R$ 2,2 bilhões, a nova tabela contempla remédios de alto custo para tumores de mama, pulmão, leucemia e estômago, além de financiar cirurgias robóticas pela primeira vez.",
       },
       {
-        source: "Folha de S.Paulo — Março de 2006",
+        source: "Portal Câmara dos Deputados — Abril de 2026",
         title:
-          "SUS credencia novos hospitais contra o câncer para reduzir filas no país",
-        text: "Com as novas regras federais, o Ministério da Saúde expande o número de Unidades de Assistência de Alta Complexidade em Oncologia (UNACONs). A medida descentraliza o atendimento de quimioterapia e radioterapia, fortalecendo hospitais regionais de médio e grande porte.",
+          "Nova lei inclui a imunoterapia em protocolos de tratamento do câncer no SUS",
+        text: "Sancionada a Lei 15.379/26, que altera a Lei Orgânica da Saúde. Nova regra facilita a incorporação de biológicos modernos que combatem tumores estimulando o sistema imunológico do paciente, democratizando o acesso que antes era exclusivo de convênios particulares.",
       },
       {
-        source: "O Globo — Outubro de 2008",
+        source: "Senado Notícias — Abril de 2026",
         title:
-          "Campanhas de mamografia batem recorde de atendimento no SUS com foco no diagnóstico precoce",
-        text: "Dados do Ministério da Saúde apontam expansão na realização de exames preventivos para mulheres na faixa prioritária. Parcerias estruturam unidades móveis para levar exames de colo de útero e de mama a municípios e comunidades isoladas.",
+          "Agora é lei: vacina contra o câncer passa a ter prioridade no Sistema Único de Saúde",
+        text: "Texto da Lei 15.385/2026 foca no Complexo Econômico-Industrial da Saúde. Diretriz impulsiona o desenvolvimento de terapias avançadas, inteligência artificial para diagnósticos rápidos e fomento à produção de imunobiológicos em solo nacional.",
+      },
+      {
+        source: "Revista Veja (Radar) — Outubro de 2024",
+        title:
+          "Ministério da Saúde inicia nova fase de plano para expandir radioterapia",
+        text: "Com recursos garantidos pelo Novo PAC, o Governo Federal destrava as substituições de equipamentos de radiação antigos e acelera a entrega de novos aceleradores lineares pelo interior do Brasil para reduzir filas crônicas.",
+      },
+      {
+        source: "GOV.BR (Reconstrução RS) — Agosto de 2024",
+        title:
+          "Lula inaugura Centro de Oncologia e Hematologia de R$ 144 milhões no Rio Grande do Sul",
+        text: "Nova unidade integrada ao Grupo Hospitalar Conceição passará a acolher 60 pacientes diariamente em tratamentos de radioterapia e expandirá em 14 leitos as internações para transplantes de medula óssea.",
       },
     ],
   },
