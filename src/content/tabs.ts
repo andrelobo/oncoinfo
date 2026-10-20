@@ -50,8 +50,6 @@ export const tabs: TabContent[] = [
     subtitle:
       "Acompanhamento das Políticas Públicas e Financiamento da Prevenção e Tratamento do Câncer",
     pdf: "/docs/governo_federal_oncologia_amazonas (2).pdf",
-    intro:
-      "Tabela comparativa de diretrizes oncológicas na Região Norte, entre a gestão Jair Bolsonaro (2019–2022) e a gestão Luiz Inácio Lula da Silva (2023–presente).",
     sections: [
       {
         heading: "Tabela Comparativa de Diretrizes Oncológicas na Região Norte",
