@@ -39,6 +39,11 @@ export type TabContent = {
   subtitle?: string;
   pdf: string;
   intro?: string;
+  /** Imagem de abertura exibida logo abaixo do cabeçalho da página. */
+  image?: {
+    src: string;
+    alt: string;
+  };
   sections: DocSection[];
   clips?: DocClip[];
   /** Notas/observações finais do documento */
@@ -242,6 +247,10 @@ export const tabs: TabContent[] = [
     subtitle:
       "Gestão: Governo Jair Bolsonaro | Tema: Políticas e Orçamento para o Tratamento do Câncer",
     pdf: "/docs/relatorio_oncologia_governo_bolsonaro.pdf",
+    image: {
+      src: "/bolsonaro.jpeg",
+      alt: "Jair Bolsonaro — governo 2019–2022",
+    },
     sections: [
       {
         heading: "1. O que foi feito no governo Bolsonaro",
@@ -280,6 +289,10 @@ export const tabs: TabContent[] = [
     subtitle:
       "Governo Federal (Gestão 2023–2026) · Relatório Consolidado de Infraestrutura e Avanços Legais",
     pdf: "/docs/lula_2.pdf",
+    image: {
+      src: "/lulaII.jpeg",
+      alt: "Luiz Inácio Lula da Silva — governo 2023–2026",
+    },
     sections: [
       {
         heading: "1. Listagem de feitos pela oncologia (2023 a 2026)",

@@ -54,6 +54,18 @@ export function TabPage() {
     <div className="space-y-8">
       <PageHeader eyebrow={tab.label} title={tab.title} lead={tab.subtitle} />
 
+      {tab.image ? (
+        <figure className="-mt-2 overflow-hidden rounded-lg border border-rule bg-paper shadow-sm">
+          <div aria-hidden className="h-1 bg-brand-blue" />
+          <img
+            src={tab.image.src}
+            alt={tab.image.alt}
+            className="block h-auto w-full"
+            loading="lazy"
+          />
+        </figure>
+      ) : null}
+
       {tab.intro ? (
         <p className="prose-lead text-muted">{tab.intro}</p>
       ) : null}
